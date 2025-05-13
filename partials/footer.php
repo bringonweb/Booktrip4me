@@ -9,7 +9,7 @@
           </div>
         </div>
         <p>
-            Book 4 Me acts solely as an independent intermediary and is not affiliated with any airline or service provider. All bookings, changes, and cancellations are subject to respective provider policies. We do not guarantee availability, accuracy, or final confirmation.
+            Booktrip4me acts solely as an independent intermediary and is not affiliated with any airline or service provider. All bookings, changes, and cancellations are subject to respective provider policies. We do not guarantee availability, accuracy, or final confirmation.
           
         </p>
       </div>
