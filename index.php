@@ -892,7 +892,7 @@
     </div>
     <div class="review__content">
       <h3 class="section__subheader">Top Reviews</h3>
-      <h2 class="section__header">Our Valuable Clients Say Abour Us</h2>
+      <h2 class="section__header">Our Valuable Clients Say About Us</h2>
       <!-- Slider main container -->
       <div class="swiper">
         <!-- Additional required wrapper -->
@@ -902,7 +902,7 @@
             <div class="review__card">
               <span><i class="ri-double-quotes-l"></i></span>
               <p class="section__description">
-                Advanto made my dream vacation a reality! From the moment I
+                Booktrip4me made my dream vacation a reality! From the moment I
                 started planning, their team provided excellent
                 recommendations and tailored my itinerary to perfection. Every
                 experience felt personalized, and I loved how seamless the
@@ -923,9 +923,9 @@
             <div class="review__card">
               <span><i class="ri-double-quotes-l"></i></span>
               <p class="section__description">
-                Exploring new destinations with Advanto was a game-changer. As
+                Exploring new destinations with Booktrip4me was a game-changer. As
                 a photographer, I'm always looking for breathtaking views and
-                unique cultural experiences. Advanto didn't disappoint! From
+                unique cultural experiences. Booktrip4me didn't disappoint! From
                 scenic landscapes to vibrant local markets, every destination
                 was a delight to capture.
               </p>
@@ -944,7 +944,7 @@
             <div class="review__card">
               <span><i class="ri-double-quotes-l"></i></span>
               <p class="section__description">
-                I've traveled a lot for work, but Advanto gave me the
+                I've traveled a lot for work, but Booktrip4me gave me the
                 opportunity to enjoy a stress-free vacation. Their attention
                 to detail was remarkable, ensuring everything from airport
                 transfers to guided tours was perfectly arranged. The
