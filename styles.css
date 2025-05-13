@@ -107,14 +107,14 @@ nav {
 /* Responsive Sizes */
 @media (max-width: 768px) {
   .site-logo {
-    width: 120px;
+    width: 100px;
     max-height: 50px;
   }
 }
 
 @media (max-width: 480px) {
   .site-logo {
-    width: 120px;
+    width: 95px;
     max-height: 40px;
   }
 }
