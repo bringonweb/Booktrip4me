@@ -93,7 +93,7 @@ nav {
 
 /* Logo Styling */
 .site-logo {
-  width: 180px;        /* Adjust base width */
+  width: 150px;        /* Adjust base width */
   height: auto;        /* Maintain aspect ratio */
   max-height: 80px;    /* Optional limit */
   display: block;
@@ -107,14 +107,14 @@ nav {
 /* Responsive Sizes */
 @media (max-width: 768px) {
   .site-logo {
-    width: 140px;
+    width: 120px;
     max-height: 50px;
   }
 }
 
 @media (max-width: 480px) {
   .site-logo {
-    width: 140px;
+    width: 120px;
     max-height: 40px;
   }
 }
