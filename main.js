@@ -449,9 +449,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-const swiper = new Swiper(".swiper", {
-  loop: true,
-});
+// const swiper = new Swiper(".swiper", {
+//   loop: true,
+// });
 
 
 
@@ -510,3 +510,6 @@ document.addEventListener('DOMContentLoaded', function() {
 //   delay: 1500,
 //   interval: 500,
 // });
+
+
+
