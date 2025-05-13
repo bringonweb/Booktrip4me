@@ -107,58 +107,6 @@
     </section>
 
     
-    <!--<section class="our-team section__container">-->
-    <!--  <div class="container">-->
-    <!--    <div class="section-title">-->
-    <!--      <h2>Meet Our Team</h2>-->
-    <!--      <p>The passionate professionals behind your seamless travel experiences</p>-->
-    <!--    </div>-->
-    <!--    <div class="team-members">-->
-    <!--      <div class="team-member">-->
-    <!--        <div class="member-image">-->
-    <!--          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="Sarah Johnson">-->
-    <!--        </div>-->
-    <!--        <div class="member-info">-->
-    <!--          <h3>Sarah Johnson</h3>-->
-    <!--          <p>CEO & Founder</p>-->
-    <!--          <div class="social-links">-->
-    <!--            <a href="#"><i class="fab fa-linkedin"></i></a>-->
-    <!--            <a href="#"><i class="fab fa-twitter"></i></a>-->
-    <!--            <a href="#"><i class="fas fa-envelope"></i></a>-->
-    <!--          </div>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--      <div class="team-member">-->
-    <!--        <div class="member-image">-->
-    <!--          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="Michael Chen">-->
-    <!--        </div>-->
-    <!--        <div class="member-info">-->
-    <!--          <h3>Michael Chen</h3>-->
-    <!--          <p>Chief Technology Officer</p>-->
-    <!--          <div class="social-links">-->
-    <!--            <a href="#"><i class="fab fa-linkedin"></i></a>-->
-    <!--            <a href="#"><i class="fab fa-github"></i></a>-->
-    <!--            <a href="#"><i class="fas fa-envelope"></i></a>-->
-    <!--          </div>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--      <div class="team-member">-->
-    <!--        <div class="member-image">-->
-    <!--          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="Priya Patel">-->
-    <!--        </div>-->
-    <!--        <div class="member-info">-->
-    <!--          <h3>Priya Patel</h3>-->
-    <!--          <p>Customer Experience Director</p>-->
-    <!--          <div class="social-links">-->
-    <!--            <a href="#"><i class="fab fa-linkedin"></i></a>-->
-    <!--            <a href="#"><i class="fab fa-instagram"></i></a>-->
-    <!--            <a href="#"><i class="fas fa-envelope"></i></a>-->
-    <!--          </div>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </div>-->
-    <!--  </div>-->
-    <!--</section>-->
 
     <section class="our-values section__container">
       <div class="container">
