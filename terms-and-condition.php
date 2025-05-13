@@ -31,8 +31,8 @@
       </div> -->
       <div class="common-container">
           <section class="common-section">
-            <h2>Book 4 Me – Travel Booking Services </h2>
-              <p>Welcome to Book 4 Me, your trusted travel partner for booking flights, hotels, car rentals, and cruises. By accessing or using our services, you agree to comply with the following terms and conditions. Please read them carefully before making any reservations.</p>
+            <h2>Booktrip4me – Travel Booking Services </h2>
+              <p>Welcome to Booktrip4me, your trusted travel partner for booking flights, hotels, car rentals, and cruises. By accessing or using our services, you agree to comply with the following terms and conditions. Please read them carefully before making any reservations.</p>
           </section>
 
           <section class="common-section">
@@ -94,7 +94,7 @@
         <section class="common-section">
             <h2>8. Intellectual Property </h2>
            <ul>
-            <li>All content on our website, including logos, text, graphics, and tools is owned by Book 4 Me and may not be used or reproduced without written permission. </li>
+            <li>All content on our website, including logos, text, graphics, and tools is owned by Booktrip4me and may not be used or reproduced without written permission. </li>
            </ul>
             
         </section>
@@ -107,13 +107,13 @@
         <section class="common-section">
             <h2>10. Governing Law and Jurisdiction</h2>
             <ul>
-                <li>These terms are governed by the laws of the jurisdiction in which Book 4 Me is registered.</li>
+                <li>These terms are governed by the laws of the jurisdiction in which Booktrip4me is registered.</li>
                 <li>
                     Any disputes shall be handled exclusively in the courts of that jurisdiction. 
                 </li>
             </ul>
             <b><p></p>
-                <b><p>By booking with Book 4 Me, you confirm that you have read, understood, and accepted these Terms and Conditions. </p></b>
+                <b><p>By booking with Booktrip4me, you confirm that you have read, understood, and accepted these Terms and Conditions. </p></b>
         </section>
       </div>
       <?php include 'partials/footer.php'; ?>

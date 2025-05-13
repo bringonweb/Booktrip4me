@@ -33,14 +33,14 @@
     <section class="our-story section__container">
       <div class="container">
         <div class="section-title">
-          <h2>About Us – Book 4 Me </h2>
+          <h2>About Us – Booktrip4me </h2>
           <p>From humble beginnings to becoming a leader in flight bookings</p>
         </div>
         <div class="story-content">
           <div class="story-text">
             <!--<h3>How We Started</h3>-->
-            <p>Welcome to Book 4 Me, your trusted partner for planning and booking unforgettable travel experiences. Whether you’re looking for the best flight deals, comfortable hotel stays, convenient car rentals, or luxurious cruise vacations, we bring everything together in one seamless platform. </p>
-            <p>We understand that travel is more than just reaching a destination—it’s about the journey, the comfort, and the memories made along the way. That’s why we’ve built Book 4 Me to deliver fast, secure, and affordable booking options tailored to your needs. </p>
+            <p>Welcome to Booktrip4me, your trusted partner for planning and booking unforgettable travel experiences. Whether you’re looking for the best flight deals, comfortable hotel stays, convenient car rentals, or luxurious cruise vacations, we bring everything together in one seamless platform. </p>
+            <p>We understand that travel is more than just reaching a destination—it’s about the journey, the comfort, and the memories made along the way. That’s why we’ve built Booktrip4me to deliver fast, secure, and affordable booking options tailored to your needs. </p>
           </div>
           <div class="story-image">
             <img src="https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Our team working">
@@ -53,7 +53,7 @@
       <div class="container">
         <div class="section-title">
           <h2>Our Mission</h2>
-          <p>At Book 4 Me, our mission is simple:</p>
+          <p>At Booktrip4me, our mission is simple:</p>
         </div>
         <p> To empower every traveler by providing easy access to comprehensive travel solutions with transparency, efficiency, and unbeatable value. We are committed to making travel planning hassle-free, enjoyable, and accessible to all, no matter the budget or destination. </p>
         </section>

@@ -32,8 +32,8 @@
       </div> -->
       <div class="common-container">
           <section class="common-section">
-            <h2>Privacy Policy for Book 4 Me </h2>
-              <p>At Book 4 Me, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, share, and safeguard your data when you use our travel booking services including flights, hotels, cruises, and car rentals.</p>
+            <h2>Privacy Policy for Booktrip4me </h2>
+              <p>At Booktrip4me, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, share, and safeguard your data when you use our travel booking services including flights, hotels, cruises, and car rentals.</p>
           </section>
 
           <section class="common-section">
