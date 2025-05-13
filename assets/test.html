@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* Hero section styles */
+.hero-section {
+    position: relative;
+    height: 600px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Booking tabs styles */
+.booking-tabs {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tabs-header {
+    display: flex;
+    background-color: #f8f8f8;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+    background-color: #eee;
+}
+
+.tab-btn.active {
+    background-color: white;
+    color: #0066cc;
+    border-bottom: 3px solid #0066cc;
+}
+
+.tab-btn i {
+    margin-right: 8px;
+}
+
+.tabs-content {
+    padding: 20px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Form styles */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.search-btn {
+    padding: 15px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.search-btn:hover {
+    background-color: #0055aa;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        padding: 80px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .tabs-header {
+        flex-direction: column;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+    </style>
+</head>
+<body>
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1>Find Your Perfect Holiday</h1>
+            <p>Compare deals from top travel providers</p>
+            
+            <div class="booking-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="flights">
+                        <i class="fas fa-plane"></i> Flights
+                    </button>
+                    <button class="tab-btn" data-tab="hotels">
+                        <i class="fas fa-hotel"></i> Hotels
+                    </button>
+                    <button class="tab-btn" data-tab="cruises">
+                        <i class="fas fa-ship"></i> Cruises
+                    </button>
+                    <button class="tab-btn" data-tab="packages">
+                        <i class="fas fa-suitcase"></i> Packages
+                    </button>
+                </div>
+                
+                <div class="tabs-content">
+                    <!-- Flights Form -->
+                    <div class="tab-pane active" id="flights">
+                        <form class="booking-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="flight-from">From</label>
+                                    <input type="text" id="flight-from" placeholder="City or Airport">
+                                </div>
+                                <div class="form-group">
+                                    <label for="flight-to">To</label>
+                                    <input type="text" id="flight-to" placeholder="City or Airport">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="flight-departure">Departure</label>
+                                    <input type="date" id="flight-departure">
+                                </div>
+                                <div class="form-group">
+                                    <label for="flight-return">Return</label>
+                                    <input type="date" id="flight-return">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="flight-class">Class</label>
+                                    <select id="flight-class">
+                                        <option value="economy">Economy</option>
+                                        <option value="premium">Premium Economy</option>
+                                        <option value="business">Business</option>
+                                        <option value="first">First Class</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="flight-passengers">Passengers</label>
+                                    <select id="flight-passengers">
+                                        <option value="1">1 Adult</option>
+                                        <option value="2">2 Adults</option>
+                                        <option value="3">3 Adults</option>
+                                        <option value="4">4 Adults</option>
+                                        <option value="family">Family</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="search-btn">Search Flights</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Hotels Form -->
+                    <div class="tab-pane" id="hotels">
+                        <form class="booking-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="hotel-destination">Destination</label>
+                                    <input type="text" id="hotel-destination" placeholder="City, Hotel, or Area">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="hotel-checkin">Check-in</label>
+                                    <input type="date" id="hotel-checkin">
+                                </div>
+                                <div class="form-group">
+                                    <label for="hotel-checkout">Check-out</label>
+                                    <input type="date" id="hotel-checkout">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="hotel-rooms">Rooms</label>
+                                    <select id="hotel-rooms">
+                                        <option value="1">1 Room</option>
+                                        <option value="2">2 Rooms</option>
+                                        <option value="3">3 Rooms</option>
+                                        <option value="4">4 Rooms</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="hotel-guests">Guests</label>
+                                    <select id="hotel-guests">
+                                        <option value="1">1 Guest</option>
+                                        <option value="2">2 Guests</option>
+                                        <option value="3">3 Guests</option>
+                                        <option value="4">4 Guests</option>
+                                        <option value="family">Family</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="search-btn">Search Hotels</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Cruises Form -->
+                    <div class="tab-pane" id="cruises">
+                        <form class="booking-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cruise-destination">Destination</label>
+                                    <select id="cruise-destination">
+                                        <option value="">Any Destination</option>
+                                        <option value="caribbean">Caribbean</option>
+                                        <option value="mediterranean">Mediterranean</option>
+                                        <option value="alaska">Alaska</option>
+                                        <option value="bahamas">Bahamas</option>
+                                        <option value="europe">Europe</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cruise-line">Cruise Line</label>
+                                    <select id="cruise-line">
+                                        <option value="">Any Cruise Line</option>
+                                        <option value="royal">Royal Caribbean</option>
+                                        <option value="carnival">Carnival</option>
+                                        <option value="norwegian">Norwegian</option>
+                                        <option value="msc">MSC</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cruise-departure">Departure Date</label>
+                                    <input type="date" id="cruise-departure">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cruise-duration">Duration</label>
+                                    <select id="cruise-duration">
+                                        <option value="">Any Duration</option>
+                                        <option value="3-5">3-5 Nights</option>
+                                        <option value="6-8">6-8 Nights</option>
+                                        <option value="9-12">9-12 Nights</option>
+                                        <option value="13+">13+ Nights</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="search-btn">Search Cruises</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Packages Form -->
+                    <div class="tab-pane" id="packages">
+                        <form class="booking-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="package-destination">Destination</label>
+                                    <input type="text" id="package-destination" placeholder="Where do you want to go?">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="package-departure">Departure Date</label>
+                                    <input type="date" id="package-departure">
+                                </div>
+                                <div class="form-group">
+                                    <label for="package-duration">Duration</label>
+                                    <select id="package-duration">
+                                        <option value="7">7 Nights</option>
+                                        <option value="10">10 Nights</option>
+                                        <option value="14">14 Nights</option>
+                                        <option value="custom">Custom</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="package-rooms">Rooms</label>
+                                    <select id="package-rooms">
+                                        <option value="1">1 Room</option>
+                                        <option value="2">2 Rooms</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="package-adults">Adults</label>
+                                    <select id="package-adults">
+                                        <option value="1">1 Adult</option>
+                                        <option value="2">2 Adults</option>
+                                        <option value="3">3 Adults</option>
+                                        <option value="4">4 Adults</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="package-children">Children</label>
+                                    <select id="package-children">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="search-btn">Search Packages</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Tab switching functionality
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons and panes
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabPanes.forEach(pane => pane.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Show corresponding pane
+            const tabId = this.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+    
+    // Initialize date inputs with current date
+    const today = new Date();
+    const tomorrow = new Date();
+    tomorrow.setDate(today.getDate() + 1);
+    
+    const formatDate = (date) => {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    };
+    
+    // Set default dates for all forms
+    document.getElementById('flight-departure').value = formatDate(today);
+    document.getElementById('flight-return').value = formatDate(tomorrow);
+    document.getElementById('hotel-checkin').value = formatDate(today);
+    document.getElementById('hotel-checkout').value = formatDate(tomorrow);
+    document.getElementById('cruise-departure').value = formatDate(today);
+    document.getElementById('package-departure').value = formatDate(today);
+    
+    // Form submission handlers
+    document.querySelectorAll('.booking-form').forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const activeTab = document.querySelector('.tab-btn.active').getAttribute('data-tab');
+            alert(`Searching for ${activeTab}... (This is a demo)`);
+        });
+    });
+});
+    </script>
+</body>
+</html>
