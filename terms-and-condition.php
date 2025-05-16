@@ -38,7 +38,7 @@
           <section class="common-section">
             <h2>1. General Overview </h2>
             <ul>
-                <li>Book For Me acts as an independent travel agency facilitating bookings with third-party service providers (airlines, hotels, car rental companies, and cruise lines). We do not own or operate the services booked through our platform and are not liable for the performance of these services.</li>
+                <li>Booktrip4me acts as an independent travel agency facilitating bookings with third-party service providers (airlines, hotels, car rental companies, and cruise lines). We do not own or operate the services booked through our platform and are not liable for the performance of these services.</li>
             </ul> 
         </section>
 
@@ -65,7 +65,7 @@
             <h2>4. Changes, Cancellations, and Refunds </h2>
             <ul>
                 <li>Each service (flight, hotel, car, cruise) has its own change and cancellation policy determined by the provider. </li>
-                <li>Book For Me will assist with modifications where possible, but additional fees may apply. </li>
+                <li>Booktrip4me will assist with modifications where possible, but additional fees may apply. </li>
                 <li>Refunds, if applicable, will be processed based on the provider's terms and may take 7–30 business days.</li>
             </ul>
         </section>
@@ -73,7 +73,7 @@
             <h2>5. Travel Documents and Identification </h2>
             <ul>
                 <li>Customers must ensure they have valid passports, visas, licenses, or identification documents required for travel.</li>
-                <li>Book For Me is not responsible for denied services due to incomplete or incorrect documentation. </li>
+                <li>Booktrip4me is not responsible for denied services due to incomplete or incorrect documentation. </li>
             </ul>
 
         </section>
@@ -87,7 +87,7 @@
         <section class="common-section">
             <h2>7. Liability Disclaimer </h2>
             <ul>
-                <li>Book For Me is not responsible for delays, cancellations, quality of services, or any loss caused by third-party providers. </li>
+                <li>Booktrip4me is not responsible for delays, cancellations, quality of services, or any loss caused by third-party providers. </li>
                 <li>Our responsibility is limited to facilitating your booking and providing customer support. </li>
             </ul>
         </section>

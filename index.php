@@ -236,7 +236,7 @@
               </div>
              
               <div class="form-group">
-                <label>trip Start</label>
+                <label>Trip Start</label>
                 <input type="date" class="form-control">
               </div>
               <div class="form-group">
