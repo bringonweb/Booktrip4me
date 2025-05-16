@@ -13,10 +13,10 @@
 </head>
 
 <body>
-    <?php include 'partials/navbar.php'; ?>
-    
-    <section class="hero-section">
-    <div class="hero-background"></div>  
+  <?php include 'partials/navbar.php'; ?>
+
+  <section class="hero-section">
+    <div class="hero-background"></div>
     <div class="hero-content">
       <div class="booking-tabs">
         <div class="tabs-header">
@@ -37,7 +37,8 @@
           <!-- Flights Form -->
           <div class="tab-pane active" id="flights">
             <!--<form class="booking-form form-row">-->
-            <form class="booking-form form-row" action="send_email.php" method="POST">
+            <form id="flightBookingForm" class="booking-form form-row" action="send_contactform_query.php"
+              method="POST">
               <div class="radio-group">
                 <label class="radio-label">
                   <!--<input type="radio" name="trip-type" value="roundtrip" checked> -->
@@ -52,20 +53,14 @@
               </div>
               <div class="form-group">
                 <label>From</label>
-                <input type="text" class="form-control"
-                        name="location"
-                        id="location"
-                        autocomplete="off"
-                        placeholder="City or Airport" required>
+                <input type="text" class="form-control" name="location" id="location" autocomplete="off"
+                  placeholder="City or Airport" required>
                 <div id="location-suggestions" class="suggestions"></div>
               </div>
               <div class="form-group">
                 <label>To</label>
-                <input type="text" class="form-control" 
-                        name="start"
-                        id="start"
-                        autocomplete="off"
-                        placeholder="City or Airport" required>
+                <input type="text" class="form-control" name="start" id="start" autocomplete="off"
+                  placeholder="City or Airport" required>
                 <div id="start-suggestions" class="suggestions"></div>
               </div>
               <div class="form-group">
@@ -80,39 +75,33 @@
                 <label>Travellers</label>
                 <input type="text" class="form-control" placeholder="2 Travellers, 1 Room">
               </div>
-              <div class="form-group">
-                <label>Name</label>
-                <input type="name" name="name" id="name" class="form-control" placeholder="Enter your name">
-              </div>
-              <div class="form-group">
-                <label>Phone</label>
-                <input type="phone" name="phone" id="phone" class="form-control" placeholder="Enter your phone no">
-              </div>
-              <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email id">
-              </div>
-              <button type="submit" class="search-btn">SEARCH</button>
+              <!-- <div class="form-group">
+                  <label>Name</label>
+                  <input type="name" name="name" id="name" class="form-control" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                  <label>Phone</label>
+                  <input type="phone" name="phone" id="phone" class="form-control" placeholder="Enter your phone no">
+                </div>
+                <div class="form-group">
+                  <label>Email</label>
+                  <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email id">
+                </div> -->
+              <button type="button" class="search-btn">SEARCH</button>
             </form>
           </div>
-
           <!-- Hotels Form -->
           <div class="tab-pane" id="hotels">
             <!--<form class="booking-form form-row">-->
-            <form class="booking-form form-row" action="send_email.php" method="POST">
+            <form id="hotelBookingForm" class="booking-form form-row" action="send_contactform_query.php" method="POST">
               <div class="form-group">
                 <label>Destination</label>
-                <input type="text" class="form-control"
-
-
-                        name="start"
-                        id="hotel-destination"
-                        autocomplete="off"
-                        placeholder="City"required>
-                        <div id="hotel-suggestions" class="suggestions"></div>
+                <input type="text" class="form-control" name="start" id="hotel-destination" autocomplete="off"
+                  placeholder="City" required>
+                <div id="hotel-suggestions" class="suggestions"></div>
               </div>
-                
-                
+
+
               <div class="form-group">
                 <label>Check-in</label>
                 <input type="date" class="form-control">
@@ -140,7 +129,7 @@
                   <option>Family</option>
                 </select>
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label>Name</label>
                 <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
               </div>
@@ -151,25 +140,22 @@
               <div class="form-group">
                 <label>Email</label>
                 <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email id">
-              </div>
-              <button type="submit" class="search-btn">SEARCH</button>
+              </div> -->
+              <button type="button" class="search-btn">SEARCH</button>
             </form>
           </div>
           <!-- Cruises Form -->
           <div class="tab-pane" id="cruises">
             <!--<form class="booking-form form-row">-->
-            <form class="booking-form form-row" action="send_email.php" method="POST">
+            <form id="cruiseBookingForm" class="booking-form form-row" action="send_contactform_query.php"
+              method="POST">
               <div class="form-group">
                 <label>Destination</label>
-                <input type="text" class="form-control"
-                
-                name="start"
-                        id="cruises-destination"
-                        autocomplete="off"
-                        placeholder="City"required>
-                        <div id="cruises-suggestions" class="suggestions"></div>
-                
-                
+                <input type="text" class="form-control" name="start" id="cruises-destination" autocomplete="off"
+                  placeholder="City" required>
+                <div id="cruises-suggestions" class="suggestions"></div>
+
+
               </div>
               <div class="form-group">
                 <label>Departure</label>
@@ -197,7 +183,7 @@
                   <option>Family</option>
                 </select>
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label>Name</label>
                 <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
               </div>
@@ -208,33 +194,25 @@
               <div class="form-group">
                 <label>Email</label>
                 <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email id">
-              </div>
-              <button type="submit" class="search-btn">SEARCH</button>
+              </div> -->
+              <button type="button" class="search-btn">SEARCH</button>
             </form>
           </div>
           <!-- car Form -->
           <div class="tab-pane" id="packages">
             <!--<form class="booking-form form-row">-->
-            <form class="booking-form form-row" action="send_email.php" method="POST">
+            <form id="carBookingForm" class="booking-form form-row" action="send_contactform_query.php" method="POST">
               <div class="form-group">
                 <label>From</label>
-                <input type="text" class="form-control"
-
-                id="clocation"
-                        autocomplete="off"
-                        placeholder="City"required>
-                        <div id="clocation-suggestions" class="suggestions"></div>
+                <input type="text" class="form-control" id="clocation" autocomplete="off" placeholder="City" required>
+                <div id="clocation-suggestions" class="suggestions"></div>
               </div>
               <div class="form-group">
                 <label>To</label>
-                <input type="text" class="form-control"
-                
-                id="cstart"
-                        autocomplete="off"
-                        placeholder="City"required>
-                        <div id="cstart-suggestions" class="suggestions"></div>
+                <input type="text" class="form-control" id="cstart" autocomplete="off" placeholder="City" required>
+                <div id="cstart-suggestions" class="suggestions"></div>
               </div>
-             
+
               <div class="form-group">
                 <label>Trip Start</label>
                 <input type="date" class="form-control">
@@ -258,7 +236,7 @@
               <!--    <option>Outstation Round Trip</option>-->
               <!--  </select>-->
               <!--</div>-->
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label>Name</label>
                 <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
               </div>
@@ -269,16 +247,162 @@
               <div class="form-group">
                 <label>Email</label>
                 <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email id">
-              </div>
-              <button type="submit" class="search-btn">SEARCH</button>
+              </div> -->
+              <button type="button" class="search-btn">SEARCH</button>
             </form>
+          </div>
+
+          <!-- Modal for Additional Information -->
+          <div class="modal" id="userDetailsModal">
+            <div class="modal-content">
+              <span class="close-btn">&times;</span>
+              <h3 class="h3Title">Please Provide us your details.<br /> so we can contact you.</h3>
+              <form id="userDetailsForm">
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" name="phone" id="phone" class="form-control" placeholder="Enter your phone number"
+                    required>
+                </div>
+                <div class="form-group">
+                  <label>Email Address</label>
+                  <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email"
+                    required>
+                </div>
+                <button type="submit" class="submit-btn">Complete Booking</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <style>
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
 
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .close-btn {
+      float: right;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      background: #ff8c00;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const searchBtns = document.querySelectorAll('.search-btn');
+      const modal = document.getElementById('userDetailsModal');
+      const closeBtn = document.querySelector('.close-btn');
+      const bookingForms = [];
+      bookingForms[0] = document.getElementById('flightBookingForm');
+      bookingForms[1] = document.getElementById('hotelBookingForm');
+      bookingForms[2] = document.getElementById('cruiseBookingForm');
+      bookingForms[3] = document.getElementById('carBookingForm');
+      userDetailsForm = document.getElementById('userDetailsForm');
+
+      // Open modal when search button is clicked
+      searchBtns.forEach((btn) => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          // Find the closest form to this button
+          const bookingForm = this.closest('form');
+
+          // First validate the main form
+          if (bookingForm.checkValidity()) {
+            modal.style.display = 'block';
+          } else {
+            // If form is invalid, show validation messages
+            bookingForm.reportValidity();
+          }
+        });
+      });
+
+      // Close modal when X is clicked
+      closeBtn.addEventListener('click', function () {
+        modal.style.display = 'none';
+      });
+
+      // Close modal when clicking outside
+      window.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+
+      // Handle user details form submission
+      userDetailsForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Create hidden inputs in the main form
+        const nameInput = document.createElement('input');
+        nameInput.type = 'hidden';
+        nameInput.name = 'name';
+        nameInput.value = document.getElementById('name').value;
+
+        const phoneInput = document.createElement('input');
+        phoneInput.type = 'hidden';
+        phoneInput.name = 'phone';
+        phoneInput.value = document.getElementById('phone').value;
+
+        const emailInput = document.createElement('input');
+        emailInput.type = 'hidden';
+        emailInput.name = 'email';
+        emailInput.value = document.getElementById('email').value;
+
+        // Add them to the form
+        bookingForms.map((formRef) => {
+          formRef.appendChild(nameInput);
+          formRef.appendChild(phoneInput);
+          formRef.appendChild(emailInput);
+        }
+        )
+
+        // Submit the main form
+        bookingForms.forEach(element => {
+          element.submit();
+        });
+
+        // Close the modal
+        modal.style.display = 'none';
+      });
+    });
+  </script>
 
 
 
@@ -297,34 +421,34 @@
       const clocationSuggestions = document.getElementById('clocation-suggestions');
       const cstartSuggestions = document.getElementById('cstart-suggestions');
 
-  
+
       if (!locationInput || !startInput || !locationSuggestions || !startSuggestions) {
         console.error('One or more elements are missing in the DOM.');
         return;
       }
-  
+
       function fetchSuggestions(query, callback) {
         fetch('https://raw.githubusercontent.com/algolia/datasets/master/airports/airports.json')
           .then(response => response.json())
           .then(data => {
-          //   console.log('API Data:', data); 
+            //   console.log('API Data:', data); 
             const filteredData = data.filter(airport =>
               airport.name.toLowerCase().includes(query.toLowerCase()) ||
               airport.city.toLowerCase().includes(query.toLowerCase())
             );
-          //   console.log('Filtered Data:', filteredData); 
+            //   console.log('Filtered Data:', filteredData); 
             callback(filteredData);
           })
           .catch(error => console.error('Error fetching suggestions:', error));
       }
-  
+
       function showSuggestions(input, container) {
         if (!container) {
           // console.error('Container is undefined.');
           return;
         }
-  
-        container.innerHTML = ''; 
+
+        container.innerHTML = '';
         if (input.value.length > 1) {
           fetchSuggestions(input.value, function (data) {
             if (data.length > 0) {
@@ -335,14 +459,14 @@
                   <small>${item.city}, ${item.country}</small>
                 `;
                 div.addEventListener('click', () => {
-                 
+
                   input.value = item.name;
-                  container.innerHTML = ''; 
+                  container.innerHTML = '';
                 });
                 container.appendChild(div);
               });
-  
-             
+
+
               container.style.display = 'block';
             } else {
               container.style.display = 'none';
@@ -352,16 +476,16 @@
           container.style.display = 'none';
         }
       }
-  
+
       locationInput.addEventListener('keyup', () => {
         showSuggestions(locationInput, locationSuggestions);
       });
-  
+
       startInput.addEventListener('keyup', () => {
         showSuggestions(startInput, startSuggestions);
       });
-  
-     
+
+
       hotelDestInput.addEventListener('keyup', () => {
         showSuggestions(hotelDestInput, hotelSuggestions);
       });
@@ -369,17 +493,17 @@
       cruisesDestInput.addEventListener('keyup', () => {
         showSuggestions(cruisesDestInput, cruisesSuggestions);
       });
-      
+
       clocationInput.addEventListener('keyup', () => {
         showSuggestions(clocationInput, clocationSuggestions);
       });
-  
+
       cstartInput.addEventListener('keyup', () => {
         showSuggestions(cstartInput, cstartSuggestions);
       });
-      
-     
-      
+
+
+
       document.addEventListener('click', (event) => {
         if (!locationInput.contains(event.target)) {
           locationSuggestions.style.display = 'none';
@@ -390,7 +514,7 @@
       });
     });
   </script>
-  
+
   <style>
     .suggestions {
       border: 1px solid #ccc;
@@ -400,25 +524,25 @@
       background-color: white;
       width: 7.5rem;
       z-index: 1000;
-      display: none; 
-      margin-top: 87px; 
+      display: none;
+      margin-top: 87px;
     }
-  
+
     .suggestions div {
       padding: 8px;
       cursor: pointer;
       border-bottom: 1px solid #eee;
     }
-  
+
     .suggestions div:hover {
       background-color: #f0f0f0;
     }
-  
+
     .suggestions strong {
       font-weight: bold;
       color: black;
     }
-  
+
     .suggestions small {
       color: #666;
     }
@@ -485,137 +609,132 @@
 
 
 
-<!-- .......................second section................................... -->
+  <!-- .......................second section................................... -->
 
 
 
-<section class="travel-deals-section">
-  <h2 class="td-title">Handpicked Deals of the Week</h2>
-  
-  <div class="td-tabs" id="tdDealTabs">
-    <div class="td-tab active" data-tab="top">Top Deals</div>
-    <div class="td-tab" data-tab="inclusive">All Inclusive</div>
-    <div class="td-tab" data-tab="summer">Summer Holidays</div>
-    <div class="td-tab" data-tab="cruise">Nile Cruise</div>
-  </div>
+  <section class="travel-deals-section">
+    <h2 class="td-title">Handpicked Deals of the Week</h2>
 
-  <div class="td-slider-container">
-    <div class="td-slider" id="tdSlider"></div>
-  </div>
+    <div class="td-tabs" id="tdDealTabs">
+      <div class="td-tab active" data-tab="top">Top Deals</div>
+      <div class="td-tab" data-tab="inclusive">All Inclusive</div>
+      <div class="td-tab" data-tab="summer">Summer Holidays</div>
+      <div class="td-tab" data-tab="cruise">Nile Cruise</div>
+    </div>
 
-  <div class="td-nav-buttons">
-    <button class="td-nav-btn" onclick="tdSlide(-1)" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
-    <button class="td-nav-btn" onclick="tdSlide(1)" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
-  </div>
-</section>
+    <div class="td-slider-container">
+      <div class="td-slider" id="tdSlider"></div>
+    </div>
+
+    <div class="td-nav-buttons">
+      <button class="td-nav-btn" onclick="tdSlide(-1)" aria-label="Previous slide"><i
+          class="fas fa-chevron-left"></i></button>
+      <button class="td-nav-btn" onclick="tdSlide(1)" aria-label="Next slide"><i
+          class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
 
 
 
- <section class="section__container choose__container" id="about">
-      <div class="choose__image">
-        <img src="assets/choose.jpg" alt="choose" />
-       
-      </div>
-      <div class="choose__content">
-        <p class="section__subheader">Why Choose Us?</p>
-        <h2 class="section__header_1">Plan Your Trip <span>With Us</span></h2>
-        <ul class="choose__list">
-          <li>
-            <span><i class="ri-verified-badge-fill"></i></span>
-            <div>
-              <h4>Best Price Gurantee</h4>
-              <p>
-                We ensure you get the most competitive rates for your travel
-                plans, making your dream destinations affordable.
-              </p>
+  <section class="section__container choose__container" id="about">
+    <div class="choose__image">
+      <img src="assets/choose.jpg" alt="choose" />
+
+    </div>
+    <div class="choose__content">
+      <p class="section__subheader">Why Choose Us?</p>
+      <h2 class="section__header_1">Plan Your Trip <span>With Us</span></h2>
+      <ul class="choose__list">
+        <li>
+          <span><i class="ri-verified-badge-fill"></i></span>
+          <div>
+            <h4>Best Price Gurantee</h4>
+            <p>
+              We ensure you get the most competitive rates for your travel
+              plans, making your dream destinations affordable.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span><i class="ri-calendar-fill"></i></span>
+          <div>
+            <h4>Booking Options</h4>
+            <p>
+              Experience the ease of flexible booking options tailored to suit
+              your schedule and preferences.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span><i class="ri-road-map-fill"></i></span>
+          <div>
+            <h4>Revising Track Map</h4>
+            <p>
+              Navigate your adventure with our personalized track maps
+              designed for seamless and enjoyable travel experiences.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- ..................................................... -->
+
+
+  <section class="destination">
+    <div class="section__container destination__container">
+      <!-- <h3 class="section__subheader">Top Destination</h3> -->
+      <h2 class="section__header">Our Top Destinations</h2>
+      <div class="destination__grid">
+        <div class="destination__card">
+          <img src="assets/destination-1.jpg" alt="destination" />
+          <div class="destination__card__content">
+            <h4>Enjoy the tour of the City of Love</h4>
+            <h5>Paris, France</h5>
+            <div class="destination__card__footer">
+              <h6>$2300</h6>
+              <p>(6 days)</p>
             </div>
-          </li>
-          <li>
-            <span><i class="ri-calendar-fill"></i></span>
-            <div>
-              <h4>Booking Options</h4>
-              <p>
-                Experience the ease of flexible booking options tailored to suit
-                your schedule and preferences.
-              </p>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="assets/destination-2.jpg" alt="destination" />
+          <div class="destination__card__content">
+            <h4>Enjoy the tour of paradise with beaches</h4>
+            <h5>Bali, Indonesia</h5>
+            <div class="destination__card__footer">
+              <h6>$1800</h6>
+              <p>(7 days)</p>
             </div>
-          </li>
-          <li>
-            <span><i class="ri-road-map-fill"></i></span>
-            <div>
-              <h4>Revising Track Map</h4>
-              <p>
-                Navigate your adventure with our personalized track maps
-                designed for seamless and enjoyable travel experiences.
-              </p>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="assets/destination-3.jpg" alt="destination" />
+          <div class="destination__card__content">
+            <h4>Enjoy the tour of luxury and innovation</h4>
+            <h5>Dubai, UAE</h5>
+            <div class="destination__card__footer">
+              <h6>$2500</h6>
+              <p>(5 days)</p>
             </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-
-
-
-
- 
-<!-- ..................................................... -->
-
-
-<section class="destination">
-  <div class="section__container destination__container">
-    <!-- <h3 class="section__subheader">Top Destination</h3> -->
-    <h2 class="section__header">Our Top Destinations</h2>
-    <div class="destination__grid">
-      <div class="destination__card">
-        <img src="assets/destination-1.jpg" alt="destination" />
-        <div class="destination__card__content">
-          <h4>Enjoy the tour of the City of Love</h4>
-          <h5>Paris, France</h5>
-          <div class="destination__card__footer">
-            <h6>$2300</h6>
-            <p>(6 days)</p>
           </div>
         </div>
       </div>
-      <div class="destination__card">
-        <img src="assets/destination-2.jpg" alt="destination" />
-        <div class="destination__card__content">
-          <h4>Enjoy the tour of paradise with beaches</h4>
-          <h5>Bali, Indonesia</h5>
-          <div class="destination__card__footer">
-            <h6>$1800</h6>
-            <p>(7 days)</p>
-          </div>
-        </div>
-      </div>
-      <div class="destination__card">
-        <img src="assets/destination-3.jpg" alt="destination" />
-        <div class="destination__card__content">
-          <h4>Enjoy the tour of luxury and innovation</h4>
-          <h5>Dubai, UAE</h5>
-          <div class="destination__card__footer">
-            <h6>$2500</h6>
-            <p>(5 days)</p>
-          </div>
-        </div>
+      <div class="destination__btn"><a href="tel:+1 (888)711 2909" class="cbtn">
+          <button class="btn">
+            Enquire now
+            <span><i class="ri-arrow-right-long-line"></i></span></a>
+        </button>
       </div>
     </div>
-    <div class="destination__btn"><a href="tel:+1 (888)711 2909" class="cbtn">
-      <button class="btn">
-        Enquire now
-        <span><i class="ri-arrow-right-long-line"></i></span></a>
-      </button>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-  <!-- ....................review.................................. -->
+  </section>
 
 
   <section class="section__container review__container">
@@ -699,28 +818,28 @@
     </div>
   </section>
 
-<?php include 'partials/footer.php'; ?>
- 
+  <?php include 'partials/footer.php'; ?>
+
 
   <script src="https://unpkg.com/scrollreveal"></script>
   <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <scrip>
-   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-     
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-    });
-  });   
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    });   
   </script>
   <script src="./main.js"></script>
 </body>

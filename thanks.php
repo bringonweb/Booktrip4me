@@ -22,6 +22,7 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
+            overflow: hidden;
         }
 
         .thank-you-container {
@@ -34,6 +35,8 @@
             width: 100%;
             transform: translateY(0);
             animation: slideUp 0.8s ease;
+            position: relative;
+            z-index: 10;
         }
 
         .checkmark-circle {
@@ -64,7 +67,7 @@
         p {
             color: #4a5568;
             line-height: 1.6;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
 
         .home-button {
@@ -79,6 +82,7 @@
             text-decoration: none;
             display: inline-block;
             box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+            margin-top: 20px;
         }
 
         .home-button:hover {
@@ -87,17 +91,44 @@
             box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
         }
 
-        .submitted-details {
+        .countdown {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            color: #4a5568;
+            font-weight: bold;
+            padding: 10px;
             background: #f7fafc;
-            padding: 20px;
             border-radius: 10px;
-            margin: 25px 0;
-            text-align: left;
+            display: inline-block;
+            min-width: 200px;
         }
 
-        .submitted-details p {
-            margin: 10px 0;
-            color: #4a5568;
+        .countdown-number {
+            font-weight: bold;
+            color: #ff8906;
+            font-size: 1.4rem;
+        }
+
+        /* Confetti styles */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            border-radius: 50%;
+            animation: confettiFall 3s linear forwards;
+            z-index: 1;
+        }
+
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
         }
 
         @keyframes slideUp {
@@ -160,12 +191,6 @@
     </style>
   </head>
   <body>
-    <header>
-        
-    
-      
-    </header>
-    
     <div class="thank-you-container">
         <div class="checkmark-circle">
             <i class="fas fa-check checkmark"></i>
@@ -173,15 +198,67 @@
         <h1>Thank You!</h1>
         <p>Your message has been successfully received. We appreciate you reaching out to us and will respond to your inquiry within 24-48 hours.</p>
         
+        <div class="countdown">
+            Redirecting in <span class="countdown-number">5</span> seconds...
+        </div>
 
         <a href="index.php" class="home-button">Return to Homepage</a>
     </div>
 
+    <script>
+        // Countdown timer
+        let countdown = 5;
+        const countdownElement = document.querySelector('.countdown-number');
+        const countdownInterval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = 'index.php';
+            }
+        }, 1000);
 
+        // Confetti popper effect
+        function createConfetti() {
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#ff8906'];
+            const confettiCount = 100;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                
+                // Random properties
+                const size = Math.random() * 10 + 5;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 3 + 2;
+                const delay = Math.random() * 2;
+                
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.backgroundColor = color;
+                confetti.style.left = `${left}%`;
+                confetti.style.animationDuration = `${animationDuration}s`;
+                confetti.style.animationDelay = `${delay}s`;
+                
+                // Random shape
+                if (Math.random() > 0.5) {
+                    confetti.style.borderRadius = '0';
+                    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                }
+                
+                document.body.appendChild(confetti);
+                
+                // Remove confetti after animation
+                setTimeout(() => {
+                    confetti.remove();
+                }, (animationDuration + delay) * 1000);
+            }
+        }
 
-
-        
-
-    </body>
+        // Trigger confetti when page loads
+        window.addEventListener('load', createConfetti);
+    </script>
+  </body>
 </html>
-  

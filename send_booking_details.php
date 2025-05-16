@@ -59,14 +59,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com'; // SMTP server
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'adityagupta80041@gmail.com'; // SMTP username
-        $mail->Password   = 'zpzlkerohziiaouu'; // SMTP password
+        $mail->Username   = 'booktrip4me1@gmail.com'; // SMTP username
+        $mail->Password   = 'Personal123'; // SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
         // Recipients
-        $mail->setFrom('adityagupta80041@gmail.com', 'Booking System');
-        $mail->addAddress('adityagupta80041@gmail.com', 'Admin');
+        $mail->setFrom('booktrip4me1@gmail.com', 'Booking System');
+        $mail->addAddress('support@booktrip4me.com', 'Admin');
 
         // Content
         $mail->isHTML(true);
@@ -74,7 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Body    = $message;
 
         $mail->send();
-        echo '<script>alert("Message sent successfully!"); window.history.back();</script>';
+        // echo '<script>alert("Message sent successfully!"); window.history.back();</script>';
+        header('Location: thanks.php');
     } catch (Exception $e) {
         echo '<script>alert("Message could not be sent. Error: '.$mail->ErrorInfo.'"); window.history.back();</script>';
     }

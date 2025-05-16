@@ -22,19 +22,19 @@ if ($conn->query($sql) === TRUE) {
     $mail = new PHPMailer(true);
     try {
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'adityagupta80041@gmail.com';
-        $mail->Password   = 'zpzlkerohziiaouu';
-        $mail->SMTPSecure = 'tls';
-        $mail->Port       = 587;
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'booktrip4me1@gmail.com';
+        $mail->Password = 'Personal123';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
 
-        $mail->setFrom('adityagupta80041@gmail.com', 'Website Contact');
-        $mail->addAddress('adityagupta80041@gmail.com', 'Admin');
+        $mail->setFrom('booktrip4me1@gmail.com', 'Website Contact');
+        $mail->addAddress('support@booktrip4me.com', 'Admin');
 
         $mail->isHTML(true);
         $mail->Subject = 'New Contact Form Submission';
-        $mail->Body    = "
+        $mail->Body = "
         <strong>Name:</strong> $first $last <br>
         <strong>Email:</strong> $email <br>
         <strong>Phone:</strong> $phone <br>

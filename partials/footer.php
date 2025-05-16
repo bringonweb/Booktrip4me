@@ -53,13 +53,13 @@
       </ul><br>
         <ul class="footer__socials">
           <li>
-            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61576593982916" rel="noopener" target="_blank"><i class="ri-facebook-fill"></i></a>
           </li>
           <li>
-            <a href="#"><i class="ri-google-fill"></i></a>
+            <a href="https://www.instagram.com/" rel="noopener" target="_blank"><i class="ri-instagram-fill"></i></a>
           </li>
           <li>
-            <a href="#"><i class="ri-linkedin-fill"></i></a>
+            <a href="https://www.linkedin.com/company/booktrip4me" rel="noopener" target="_blank"><i class="ri-linkedin-fill"></i></a>
           </li>
         </ul>
       </div>
