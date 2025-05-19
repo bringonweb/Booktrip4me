@@ -76,12 +76,12 @@
                 <div class="form-group" style="flex:1">
                   <!-- <label>Departure</label> -->
                   <input class="form-control" placeholder="Departure on" type="text"
-                    onfocus="(this.type='date', this.showPicker())" onblur="(this.type='text')">
+                    onfocus="(this.type='date', this.showPicker())" inputmode="none" onblur="(this.type='text')">
                 </div>
                 <div class="form-group return-date" style="flex:1">
                   <!-- <label class="mm">Return</label> -->
                   <input class="form-control" placeholder="Returning on" type="text"
-                    onfocus="(this.type='date', this.showPicker())" onblur="(this.type='text')">
+                    onfocus="(this.type='date', this.showPicker())" inputmode="none" onblur="(this.type='text')">
                 </div>
                 <div class="form-group" style="flex:1">
                   <!-- <label>Travellers</label> -->
@@ -107,12 +107,12 @@
                 <div class="form-group" style="flex:1">
                   <!-- <label>Check-in</label> -->
                   <input placeholder="Check In" type="text" onfocus="(this.type='date', this.showPicker())"
-                    onblur="(this.type='text')" class="form-control">
+                    onblur="(this.type='text')" inputmode="none" class="form-control">
                 </div>
                 <div class="form-group" style="flex:1">
                   <!-- <label>Check-out</label> -->
                   <input placeholder="Check Out" type="text" onfocus="(this.type='date', this.showPicker())"
-                    onblur="(this.type='text')" class="form-control">
+                    onblur="(this.type='text')" inputmode="none" class="form-control">
                 </div>
               </div>
               <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
@@ -157,12 +157,12 @@
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Departure</label> -->
                   <input placeholder="Departure on" type="text" onfocus="(this.type='date', this.showPicker())"
-                    onblur="(this.type='text')" class="form-control">
+                    onblur="(this.type='text')" inputmode="none" class="form-control">
                 </div>
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Return Date</label> -->
                   <input placeholder="Returning on" type="text" onfocus="(this.type='date', this.showPicker())"
-                    onblur="(this.type='text')" class="form-control">
+                    onblur="(this.type='text')" inputmode="none" class="form-control">
                 </div>
               </div>
               <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
@@ -210,12 +210,12 @@
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Trip Start</label> -->
                   <input placeholder="Trip start" type="text" onfocus="(this.type='date', this.showPicker())"
-                    onblur="(this.type='text')" class="form-control">
+                    onblur="(this.type='text')" inputmode="none" class="form-control">
                 </div>
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Trip End</label> -->
                   <input placeholder="Trip End" type="text" onfocus="(this.type='date', this.showPicker())"
-                    onblur="(this.type='text')" class="form-control">
+                    onblur="(this.type='text')" inputmode="none" class="form-control">
                 </div>
 
                 <div class="form-group" style="flex:1;">
