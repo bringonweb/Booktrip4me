@@ -390,7 +390,6 @@ nav {
 
 
 
-
 }
 
 @media (width > 1024px) {
@@ -473,6 +472,16 @@ body {
   font-size: 1.2rem;
 }
 
+.tab-btn i {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .tab-btn i {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
 
 /* Booking tabs styles */
 .booking-tabs {
@@ -483,11 +492,11 @@ body {
   background-color: rgba(255, 255, 255, 1);
   border-radius: 1.5rem;
   /* overflow: hidden; */
-  box-shadow: -3px 3px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: -3px 3px 15px 0px rgba(0, 0, 0, 0.8);
   /* max- width: 1000px; */
   /* margin: 0 auto; */
   position: relative;
-  padding: 1%;
+  padding: 20px 10px;
 }
 
 
@@ -594,7 +603,7 @@ body {
   .radio-group {
     position: static;
     margin-bottom: 15px;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     justify-content: flex-start;
     margin-top: -2rem;
   }
@@ -621,7 +630,7 @@ body {
   font-size: 14px;
   color: #333;
   cursor: pointer;
-  padding: 4px 8px;
+  /* padding: 4px 8px; */
   /* background: #f0f0f0; */
   border-radius: 20px;
 }
@@ -1674,11 +1683,9 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background: none;
   box-shadow: none;
-  transition: all 0.3s ease;
-
 }
 
 @media (max-width: 768px) {

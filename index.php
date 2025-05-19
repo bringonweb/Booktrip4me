@@ -71,7 +71,7 @@
                 </div>
               </div>
               <div
-                style="display:flex; flex-direction: row; justify-content: space-between; align-items: space-between; gap:5px;">
+                style="display:flex; flex-direction: row; justify-content: space-between; align-items: space-between; gap:5px; flex-wrap: wrap;">
 
                 <div class="form-group" style="flex:1">
                   <!-- <label>Departure</label> -->
