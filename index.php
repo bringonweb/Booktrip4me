@@ -97,52 +97,46 @@
             <!--<form class="booking-form form-row">-->
             <form id="hotelBookingForm" class="booking-form form-row" action="send_contactform_query.php" method="POST">
               <div class="form-group">
-                <label>Destination</label>
+                <!-- <label>Destination</label> -->
                 <input type="text" class="form-control" name="start" id="hotel-destination" autocomplete="off"
-                  placeholder="City" required>
+                  placeholder="Destination" required>
                 <div id="hotel-suggestions" class="suggestions"></div>
               </div>
 
+              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
+                <div class="form-group" style="flex:1">
+                  <!-- <label>Check-in</label> -->
+                  <input placeholder="Check In" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                    class="form-control">
+                </div>
+                <div class="form-group" style="flex:1">
+                  <!-- <label>Check-out</label> -->
+                  <input placeholder="Check Out" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                    class="form-control">
+                </div>
+              </div>
+              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
 
-              <div class="form-group">
-                <label>Check-in</label>
-                <input type="date" class="form-control">
+                <div class="form-group" style="flex:1">
+                  <!-- <label>Rooms</label> -->
+                  <select class="form-control">
+                    <option>1 Room</option>
+                    <option>2 Rooms</option>
+                    <option>3 Rooms</option>
+                    <option>4 Rooms</option>
+                  </select>
+                </div>
+                <div class="form-group" style="flex:1">
+                  <!-- <label>Guests</label> -->
+                  <select class="form-control">
+                    <option>1 Guest</option>
+                    <option>2 Guests</option>
+                    <option>3 Guests</option>
+                    <option>4 Guests</option>
+                    <option>Family</option>
+                  </select>
+                </div>
               </div>
-              <div class="form-group">
-                <label>Check-out</label>
-                <input type="date" class="form-control">
-              </div>
-              <div class="form-group">
-                <label>Rooms</label>
-                <select class="form-control">
-                  <option>1 Room</option>
-                  <option>2 Rooms</option>
-                  <option>3 Rooms</option>
-                  <option>4 Rooms</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Guests</label>
-                <select class="form-control">
-                  <option>1 Guest</option>
-                  <option>2 Guests</option>
-                  <option>3 Guests</option>
-                  <option>4 Guests</option>
-                  <option>Family</option>
-                </select>
-              </div>
-              <!-- <div class="form-group">
-                <label>Name</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
-              </div>
-              <div class="form-group">
-                <label>Phone</label>
-                <input type="phone" name="phone" id="phone"class="form-control" placeholder="Enter your phone no">
-              </div>
-              <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email id">
-              </div> -->
               <button type="button" class="search-btn">SEARCH</button>
             </form>
           </div>
@@ -152,51 +146,45 @@
             <form id="cruiseBookingForm" class="booking-form form-row" action="send_contactform_query.php"
               method="POST">
               <div class="form-group">
-                <label>Destination</label>
+                <!-- <label>Destination</label> -->
                 <input type="text" class="form-control" name="start" id="cruises-destination" autocomplete="off"
-                  placeholder="City" required>
+                  placeholder="Destination" required>
                 <div id="cruises-suggestions" class="suggestions"></div>
 
 
               </div>
-              <div class="form-group">
-                <label>Departure</label>
-                <input type="date" class="form-control">
+              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
+                <div class="form-group" style="flex:1;">
+                  <!-- <label>Departure</label> -->
+                  <input placeholder="Departure on" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                    class="form-control">
+                </div>
+                <div class="form-group" style="flex:1;">
+                  <!-- <label>Return Date</label> -->
+                  <input placeholder="Returning on" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                    class="form-control">
+                </div>
               </div>
-              <div class="form-group">
-                <label>Return Date</label>
-                <input type="date" class="form-control">
+              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
+                <div class="form-group" style="flex:1;">
+                  <!-- <label>Cruise</label> -->
+                  <select class="form-control">
+                    <option>Carnival</option>
+                    <option>Royal Caribbean</option>
+                    <option>Norwegian</option>
+                  </select>
+                </div>
+                <div class="form-group" style="flex:1;">
+                  <!-- <label>Guests</label> -->
+                  <select class="form-control">
+                    <option>1 Guest</option>
+                    <option>2 Guests</option>
+                    <option>3 Guests</option>
+                    <option>4 Guests</option>
+                    <option>Family</option>
+                  </select>
+                </div>
               </div>
-              <div class="form-group">
-                <label>Cruise</label>
-                <select class="form-control">
-                  <option>Carnival</option>
-                  <option>Royal Caribbean</option>
-                  <option>Norwegian</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Guests</label>
-                <select class="form-control">
-                  <option>1 Guest</option>
-                  <option>2 Guests</option>
-                  <option>3 Guests</option>
-                  <option>4 Guests</option>
-                  <option>Family</option>
-                </select>
-              </div>
-              <!-- <div class="form-group">
-                <label>Name</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
-              </div>
-              <div class="form-group">
-                <label>Phone</label>
-                <input type="phone" name="phone" id="phone" class="form-control" placeholder="Enter your phone no">
-              </div>
-              <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email id">
-              </div> -->
               <button type="button" class="search-btn">SEARCH</button>
             </form>
           </div>
@@ -204,52 +192,42 @@
           <div class="tab-pane" id="packages">
             <!--<form class="booking-form form-row">-->
             <form id="carBookingForm" class="booking-form form-row" action="send_contactform_query.php" method="POST">
-              <div class="form-group">
-                <label>From</label>
-                <input type="text" class="form-control" id="clocation" autocomplete="off" placeholder="City" required>
-                <div id="clocation-suggestions" class="suggestions"></div>
+              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
+
+                <div class="form-group" style="flex:1;">
+                  <!-- <label>From</label> -->
+                  <input type="text" class="form-control" id="clocation" autocomplete="off" placeholder="From" required>
+                  <div id="clocation-suggestions" class="suggestions"></div>
+                </div>
+                <div class="form-group" style="flex:1;">
+                  <!-- <label>To</label> -->
+                  <input type="text" class="form-control" id="cstart" autocomplete="off" placeholder="To" required>
+                  <div id="cstart-suggestions" class="suggestions"></div>
+                </div>
               </div>
-              <div class="form-group">
-                <label>To</label>
-                <input type="text" class="form-control" id="cstart" autocomplete="off" placeholder="City" required>
-                <div id="cstart-suggestions" class="suggestions"></div>
+              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
+
+                <div class="form-group" style="flex:1;">
+                  <!-- <label>Trip Start</label> -->
+                  <input placeholder="Trip start" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                    class="form-control">
+                </div>
+                <div class="form-group" style="flex:1;">
+                  <!-- <label>Trip End</label> -->
+                  <input placeholder="Trip End" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                    class="form-control">
+                </div>
+
+                <div class="form-group" style="flex:1;">
+                  <!-- <label>Guests</label> -->
+                  <select class="form-control">
+                    <option>1 Adult</option>
+                    <option>2 Adults</option>
+                    <option>Family</option>
+                  </select>
+                </div>
               </div>
 
-              <div class="form-group">
-                <label>Trip Start</label>
-                <input type="date" class="form-control">
-              </div>
-              <div class="form-group">
-                <label>Trip End</label>
-                <input type="date" class="form-control">
-              </div>
-              <div class="form-group">
-                <label>Guests</label>
-                <select class="form-control">
-                  <option>1 Adult</option>
-                  <option>2 Adults</option>
-                  <option>Family</option>
-                </select>
-              </div>
-              <!--<div class="form-group">-->
-              <!--  <label>Trip type</label>-->
-              <!--  <select class="form-control">-->
-              <!--    <option>Outstation One Way</option>-->
-              <!--    <option>Outstation Round Trip</option>-->
-              <!--  </select>-->
-              <!--</div>-->
-              <!-- <div class="form-group">
-                <label>Name</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
-              </div>
-              <div class="form-group">
-                <label>Phone</label>
-                <input type="phone" name="phone" id="phone" class="form-control" placeholder="Enter your phone no">
-              </div>
-              <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email id">
-              </div> -->
               <button type="button" class="search-btn">SEARCH</button>
             </form>
           </div>
@@ -523,11 +501,12 @@
       max-height: 150px;
       overflow-y: auto;
       position: absolute;
+      top: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       background-color: white;
-      width: 15rem;
+      width: 100%;
       z-index: 1000;
       display: none;
-      margin-top: 87px;
     }
 
     .suggestions div {

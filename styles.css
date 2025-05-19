@@ -464,9 +464,9 @@ body {
 }
 
 .tab-btn.active {
-  color: #0066cc;
-  border: 2px solid #0066cc;
-  background-color: #0066cc38;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  background-color: #FF890638;
 }
 
 .tab-btn i {
@@ -1199,6 +1199,7 @@ form {
 }
 
 .form-group {
+  position: relative;
   display: flex;
   gap: 2px;
   flex-direction: column;
@@ -1676,6 +1677,7 @@ body {
   overflow-y: scroll;
   background: none;
   box-shadow: none;
+  transition: all 0.3s ease;
 
 }
 
