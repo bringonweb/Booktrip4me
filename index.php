@@ -20,16 +20,20 @@
       <div class="booking-tabs">
         <div class="tabs-header">
           <button class="tab-btn active" data-tab="flights">
-            <i class="fas fa-plane"></i><br>Flights
+            <i class="fas fa-plane"></i>
+            Flights
           </button>
           <button class="tab-btn" data-tab="hotels">
-            <i class="fas fa-hotel"></i><br>Hotels
+            <i class="fas fa-hotel"></i>
+            Hotels
           </button>
           <button class="tab-btn" data-tab="cruises">
-            <i class="fas fa-ship"></i><br>Cruises
+            <i class="fas fa-ship"></i>
+            Cruises
           </button>
           <button class="tab-btn" data-tab="packages">
-            <i class="fas fa-car"></i><br>Car
+            <i class="fas fa-car"></i>
+            car
           </button>
         </div>
         <div class="tabs-content">
@@ -50,42 +54,41 @@
                   One Way
                 </label>
               </div>
-              <div class="form-group">
-                <label>From</label>
-                <input type="text" class="form-control" name="location" id="location" autocomplete="off"
-                  placeholder="City or Airport" required>
-                <div id="location-suggestions" class="suggestions"></div>
-              </div>
-              <div class="form-group">
-                <label>To</label>
-                <input type="text" class="form-control" name="start" id="start" autocomplete="off"
-                  placeholder="City or Airport" required>
-                <div id="start-suggestions" class="suggestions"></div>
-              </div>
-              <div class="form-group">
-                <label>Departure</label>
-                <input type="date" class="form-control">
-              </div>
-              <div class="form-group return-date">
-                <label class="mm">Return</label>
-                <input type="date" class="form-control">
-              </div>
-              <div class="form-group">
-                <label>Travellers</label>
-                <input type="text" class="form-control" placeholder="2 Travellers, 1 Room">
-              </div>
-              <!-- <div class="form-group">
-                  <label>Name</label>
-                  <input type="name" name="name" id="name" class="form-control" placeholder="Enter your name">
+              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
+
+
+                <div class="form-group" style="flex:1">
+                  <!-- <label>From</label> -->
+                  <input type="text" class="form-control" name="location" id="location" autocomplete="off"
+                    placeholder="from" required>
+                  <div id="location-suggestions" class="suggestions"></div>
                 </div>
-                <div class="form-group">
-                  <label>Phone</label>
-                  <input type="phone" name="phone" id="phone" class="form-control" placeholder="Enter your phone no">
+                <div class="form-group " style="flex:1">
+                  <!-- <label>To</label> -->
+                  <input type="text" class="form-control" name="start" id="start" autocomplete="off" placeholder="to"
+                    required>
+                  <div id="start-suggestions" class="suggestions"></div>
                 </div>
-                <div class="form-group">
-                  <label>Email</label>
-                  <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email id">
-                </div> -->
+              </div>
+              <div
+                style="display:flex; flex-direction: row; justify-content: space-between; align-items: space-between; gap:5px;">
+
+                <div class="form-group" style="flex:1">
+                  <!-- <label>Departure</label> -->
+                  <input class="form-control" placeholder="Departure on" type="text" onfocus="(this.type='date')"
+                    onblur="(this.type='text')">
+                </div>
+                <div class="form-group return-date" style="flex:1">
+                  <!-- <label class="mm">Return</label> -->
+                  <input class="form-control" placeholder="Returning on" type="text" onfocus="(this.type='date')"
+                    onblur="(this.type='text')">
+                </div>
+                <div class="form-group" style="flex:1">
+                  <!-- <label>Travellers</label> -->
+                  <input type="text" class="form-control" placeholder="2 Travellers, 1 Room">
+                </div>
+              </div>
+
               <button type="button" class="search-btn">SEARCH</button>
             </form>
           </div>
@@ -521,7 +524,7 @@
       overflow-y: auto;
       position: absolute;
       background-color: white;
-      width: 7.5rem;
+      width: 15rem;
       z-index: 1000;
       display: none;
       margin-top: 87px;

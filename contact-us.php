@@ -59,7 +59,7 @@
     <div class="contact-methods">
       <div class="contact-box">
         <div class="contact-icon"><i class="fas fa-phone"></i></div>
-        <div class="contact-text">+1 (888)711 2909</div>
+        <div class="contact-text">+1 (888) 711 2909</div>
       </div>
       <div class="contact-box">
         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
@@ -135,7 +135,7 @@
     </div>
   </section>
 
-  
+
 
   <?php include 'partials/footer.php'; ?>
   <script src="https://unpkg.com/scrollreveal"></script>
