@@ -54,7 +54,7 @@
                   One Way
                 </label>
               </div>
-              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:1rem">
+              <div class="row-inside-form">
 
 
                 <div class="form-group" style="flex:1">
@@ -70,8 +70,7 @@
                   <div id="start-suggestions" class="suggestions"></div>
                 </div>
               </div>
-              <div
-                style="display:flex; flex-direction: row; justify-content: space-between; align-items: space-between; gap:1rem; flex-wrap: wrap;">
+              <div class="row-inside-form">
 
                 <div class="form-group" style="flex:1">
                   <!-- <label>Departure</label> -->
@@ -106,7 +105,7 @@
                 <div id="hotel-suggestions" class="suggestions"></div>
               </div>
 
-              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
+              <div class="row-inside-form">
                 <div class="form-group" style="flex:1">
                   <!-- <label>Check-in</label> -->
                   <input placeholder="Check In" type="text" onfocus="(this.type='date', this.showPicker())"
@@ -118,7 +117,7 @@
                     onblur="(this.type='text')" inputmode="none" class="form-control">
                 </div>
               </div>
-              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
+              <div class="row-inside-form">
 
                 <div class="form-group" style="flex:1">
                   <!-- <label>Rooms</label> -->
@@ -158,7 +157,7 @@
 
 
               </div>
-              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
+              <div class="row-inside-form">
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Departure</label> -->
                   <input placeholder="Departure on" type="text" onfocus="(this.type='date', this.showPicker())"
@@ -170,7 +169,7 @@
                     onblur="(this.type='text')" inputmode="none" class="form-control">
                 </div>
               </div>
-              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
+              <div class="row-inside-form">
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Cruise</label> -->
                   <select class="form-control">
@@ -199,7 +198,7 @@
           <div class="tab-pane" id="packages">
             <!--<form class="booking-form form-row">-->
             <form id="carBookingForm" class="booking-form form-row" action="send_contactform_query.php" method="POST">
-              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
+              <div class="row-inside-form">
 
                 <div class="form-group" style="flex:1;">
                   <!-- <label>From</label> -->
@@ -212,7 +211,7 @@
                   <div id="cstart-suggestions" class="suggestions"></div>
                 </div>
               </div>
-              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
+              <div class="row-inside-form">
 
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Trip Start</label> -->
