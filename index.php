@@ -76,12 +76,14 @@
                 <div class="form-group" style="flex:1">
                   <!-- <label>Departure</label> -->
                   <input class="form-control" placeholder="Departure on" type="text"
-                    onfocus="(this.type='date', this.showPicker())" inputmode="none" onblur="(this.type='text')">
+                    onfocus="(this.type='date', this.showPicker())" onclick="(this.type='date', this.showPicker())"
+                    inputmode="none" onblur="(this.type='text')">
                 </div>
                 <div class="form-group return-date" style="flex:1">
                   <!-- <label class="mm">Return</label> -->
                   <input class="form-control" placeholder="Returning on" type="text"
-                    onfocus="(this.type='date', this.showPicker())" inputmode="none" onblur="(this.type='text')">
+                    onfocus="(this.type='date', this.showPicker())" onclick="(this.type='date', this.showPicker())"
+                    inputmode="none" onblur="(this.type='text')">
                 </div>
                 <div class="form-group" style="flex:1">
                   <!-- <label>Travellers</label> -->
@@ -237,21 +239,17 @@
             <div class="modal-content">
               <span class="close-btn">&times;</span>
               <h3 class="h3Title">Please Provide us your details.<br /> so we can contact you.</h3>
-              <form id="userDetailsForm">
-                <div class="form-group">
-                  <label>Full Name</label>
-                  <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                  <label>Phone Number</label>
-                  <input type="tel" name="phone" id="phone" class="form-control" placeholder="Enter your phone number"
-                    required>
-                </div>
-                <div class="form-group">
-                  <label>Email Address</label>
-                  <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email"
-                    required>
-                </div>
+              <form class="modal-form" id="userDetailsForm">
+
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+
+                <input type="tel" name="phone" id="phone" class="form-control" placeholder="Enter your phone number"
+                  required>
+
+
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email"
+                  required>
+
                 <button type="submit" class="submit-btn">Complete Booking</button>
               </form>
             </div>
@@ -266,22 +264,34 @@
     .modal {
       display: none;
       position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
+      z-index: 99999999999999999;
+      /* left: 7.5vw; */
+      /* top: 15vh; */
+      /* width: 85vw; */
+      /* height: 80vh; */
       background-color: rgba(0, 0, 0, 0.5);
+      inset: 0;
     }
 
     .modal-content {
       background-color: #fff;
-      margin: 10% auto;
+      margin: 0% auto;
       padding: 2rem;
       border-radius: 8px;
-      width: 90%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
       max-width: 500px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
+    }
+
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+
+      gap: 1rem;
     }
 
     .close-btn {
