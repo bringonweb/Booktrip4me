@@ -16,7 +16,6 @@
   <?php include 'partials/navbar.php'; ?>
 
   <section class="hero-section">
-    <div class="hero-background"></div>
     <div class="hero-content">
       <div class="booking-tabs">
         <div class="tabs-header">
