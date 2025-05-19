@@ -54,7 +54,7 @@
                   One Way
                 </label>
               </div>
-              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:5px ">
+              <div style="display:flex; flex-direction: row; justify-content: space-between; gap:1rem">
 
 
                 <div class="form-group" style="flex:1">
@@ -71,7 +71,7 @@
                 </div>
               </div>
               <div
-                style="display:flex; flex-direction: row; justify-content: space-between; align-items: space-between; gap:5px; flex-wrap: wrap;">
+                style="display:flex; flex-direction: row; justify-content: space-between; align-items: space-between; gap:1rem; flex-wrap: wrap;">
 
                 <div class="form-group" style="flex:1">
                   <!-- <label>Departure</label> -->
@@ -90,8 +90,9 @@
                   <input type="text" class="form-control" placeholder="2 Travellers, 1 Room">
                 </div>
               </div>
-
-              <button type="button" class="search-btn">SEARCH</button>
+              <div style="display: flex; justify-content: flex-end;">
+                <button type="button" class="search-btn">SEARCH</button>
+              </div>
             </form>
           </div>
           <!-- Hotels Form -->
@@ -139,7 +140,9 @@
                   </select>
                 </div>
               </div>
-              <button type="button" class="search-btn">SEARCH</button>
+              <div style="display: flex; justify-content: flex-end;">
+                <button type="button" class="search-btn">SEARCH</button>
+              </div>
             </form>
           </div>
           <!-- Cruises Form -->
@@ -187,7 +190,9 @@
                   </select>
                 </div>
               </div>
-              <button type="button" class="search-btn">SEARCH</button>
+              <div style="display: flex; justify-content: flex-end;">
+                <button type="button" class="search-btn">SEARCH</button>
+              </div>
             </form>
           </div>
           <!-- car Form -->
@@ -229,8 +234,9 @@
                   </select>
                 </div>
               </div>
-
-              <button type="button" class="search-btn">SEARCH</button>
+              <div style="display: flex; justify-content: flex-end;">
+                <button type="button" class="search-btn">SEARCH</button>
+              </div>
             </form>
           </div>
 
@@ -240,16 +246,11 @@
               <span class="close-btn">&times;</span>
               <h3 class="h3Title">Please Provide us your details.<br /> so we can contact you.</h3>
               <form class="modal-form" id="userDetailsForm">
-
                 <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
-
                 <input type="tel" name="phone" id="phone" class="form-control" placeholder="Enter your phone number"
                   required>
-
-
                 <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email"
                   required>
-
                 <button type="submit" class="submit-btn">Complete Booking</button>
               </form>
             </div>
