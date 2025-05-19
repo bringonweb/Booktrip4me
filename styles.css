@@ -567,7 +567,7 @@ body {
 /* Responsive styles */
 @media (max-width: 768px) {
   .hero-section {
-    height: auto;
+    height: 100vh;
     padding: 100px 0;
   }
 
