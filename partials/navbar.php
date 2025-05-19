@@ -24,9 +24,12 @@
           <li><a href="/refund-policy.php">Refund Policy</a></li>
         </ul>
       </li>
+      <li class="hidden-in-desktop"><a href="/terms-and-condition.php">Terms & Condition</a></li>
+      <li class="hidden-in-desktop"><a href="/privacy-policy.php">Privacy Policy</a></li>
+      <li class="hidden-in-desktop"><a href="/refund-policy.php">Refund Policy</a></li>
     </ul>
     <div class="nav__btns">
-      <button class="btn"><a href="tel:+1 (888)711 2909" class="cbtn"><i class="fas fa-phone"></i>+1 (888)711
+      <button class="btn"><a href="tel:+1 (888)711 2909" class="cbtn"><i class="fas fa-phone"></i>+1 (888) 711
           2909</a></button>
     </div>
   </nav>
