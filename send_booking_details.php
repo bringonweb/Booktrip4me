@@ -63,13 +63,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com'; // SMTP server
         $mail->SMTPAuth = true;
-        $mail->Username = 'adityagupta80041@gmail.com'; // SMTP username
-        $mail->Password = 'zpzlkerohziiaouu'; // SMTP password
+        // $mail->Username = 'adityagupta80041@gmail.com'; // SMTP username
+        // $mail->Password = 'zpzlkerohziiaouu'; // SMTP password
+        $mail->Username = 'booktrip4me1@gmail.com'; // SMTP username 
+        $mail->Password = 'Personal123*'; // SMTP password   
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Recipients
-        $mail->setFrom('adityagupta80041@gmail.com', 'Booking System');
+        $mail->setFrom('booktrip4me1@gmail.com', 'Booking System');
         $mail->addAddress('support@booktrip4me.com', 'Admin');
 
         // Content
