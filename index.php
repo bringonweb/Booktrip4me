@@ -16,6 +16,7 @@
   <?php include 'partials/navbar.php'; ?>
 
   <section class="hero-section">
+    <img id="heroImg" src="./assets/Plane.png" alt="HoveringImg" class="hero-animation-img animate-hero-img" />
     <div class="hero-content">
       <div class="booking-tabs">
         <div class="tabs-header">
@@ -321,6 +322,8 @@
     }
   </style>
 
+
+  <!-- Script to ask personal details before booking -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const searchBtns = document.querySelectorAll('.search-btn');
@@ -403,7 +406,7 @@
   </script>
 
 
-
+  <!-- Script to insert destination suggestions in dom  -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const locationInput = document.getElementById('location');
@@ -513,6 +516,7 @@
     });
   </script>
 
+  <!-- Styling for location suggestions -->
   <style>
     .suggestions {
       border: 1px solid #ccc;
@@ -546,14 +550,6 @@
       color: #666;
     }
   </style>
-
-
-
-
-
-
-
-
 
   <section class="features-section">
     <div class="features-container">

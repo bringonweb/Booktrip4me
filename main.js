@@ -45,30 +45,50 @@ ScrollReveal().reveal(".header__btns", {
 // });
 
 
+const tabImgs = {
+  "flights": 'Plane.png',
+  "hotels": 'Hotel.png',
+  "cruises": 'CruiseShip.png',
+  "packages": 'Car.png',
+};
+const heroBg = {
+  "flights": 'https://cdn.pixabay.com/photo/2016/04/15/10/23/grindelwald-1330662_1280.jpg',
+  "hotels": 'https://plus.unsplash.com/premium_photo-1661964298224-7747aa0ac10c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  "cruises": 'https://images.unsplash.com/photo-1604474361016-73d1bd3021fa?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  "packages": 'https://cdn.pixabay.com/photo/2018/09/02/18/18/road-3649442_1280.jpg',
+};
 
 
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const tabButtons = document.querySelectorAll('.tab-btn');
-  
+
   tabButtons.forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
       // Remove active class from all buttons
       tabButtons.forEach(btn => {
         btn.classList.remove('active');
       });
-      
+
       // Add active class to clicked button
       this.classList.add('active');
-      
+
       // Hide all tab panes
       document.querySelectorAll('.tab-pane').forEach(pane => {
         pane.classList.remove('active');
       });
-      
+
       // Show the selected tab pane
       const tabId = this.getAttribute('data-tab');
-      document.getElementById(tabId).classList.add('active');
+      const currentTab = document.getElementById(tabId)
+      const heroImg = document.getElementById('heroImg');
+      const heroSection = document.querySelector('.hero-section');
+      currentTab.classList.add('active');
+      heroImg.src = `./assets/${tabImgs[tabId]}`;
+      heroImg.alt = `${tabId.charAt(0).toUpperCase() + tabId.slice(1)} Image`;
+      heroImg.classList.remove('animate-hero-img');
+      void heroImg.offsetWidth; // trigger reflow
+      heroImg.classList.add('animate-hero-img');
+      heroSection.style.backgroundImage = `url(${heroBg[tabId]})`;
     });
   });
 });
@@ -88,34 +108,34 @@ document.addEventListener('DOMContentLoaded', function() {
 //   // Tab switching functionality
 //   const tabButtons = document.querySelectorAll('.tab-btn');
 //   const tabPanes = document.querySelectorAll('.tab-pane');
-  
+
 //   tabButtons.forEach(button => {
 //       button.addEventListener('click', function() {
 //           // Remove active class from all buttons and panes
 //           tabButtons.forEach(btn => btn.classList.remove('active'));
 //           tabPanes.forEach(pane => pane.classList.remove('active'));
-          
+
 //           // Add active class to clicked button
 //           this.classList.add('active');
-          
+
 //           // Show corresponding pane
 //           const tabId = this.getAttribute('data-tab');
 //           document.getElementById(tabId).classList.add('active');
 //       });
 //   });
-  
+
 //   // Initialize date inputs with current date
 //   const today = new Date();
 //   const tomorrow = new Date();
 //   tomorrow.setDate(today.getDate() + 1);
-  
+
 //   const formatDate = (date) => {
 //       const year = date.getFullYear();
 //       const month = String(date.getMonth() + 1).padStart(2, '0');
 //       const day = String(date.getDate()).padStart(2, '0');
 //       return `${year}-${month}-${day}`;
 //   };
-  
+
 //   Set default dates for all forms
 //   document.getElementById('flight-departure').value = formatDate(today);
 //   document.getElementById('flight-return').value = formatDate(tomorrow);
@@ -123,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //   document.getElementById('hotel-checkout').value = formatDate(tomorrow);
 //   document.getElementById('cruise-departure').value = formatDate(today);
 //   document.getElementById('package-departure').value = formatDate(today);
-  
+
 //   Form submission handlers
 //   document.querySelectorAll('.booking-form').forEach(form => {
 //       form.addEventListener('submit', function(e) {
@@ -144,43 +164,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Scoped JavaScript for travel deals component
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const travelDeals = document.querySelector('.travel-deals');
-  
+
   // Tab functionality
   const tabs = travelDeals.querySelectorAll('.tab-btn');
   const sliders = travelDeals.querySelectorAll('.deals-slider');
-  
+
   tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-          tabs.forEach(t => t.classList.remove('active'));
-          sliders.forEach(s => s.style.display = 'none');
-          tab.classList.add('active');
-          const tabId = tab.dataset.tab;
-          travelDeals.querySelector(`#${tabId}`).style.display = 'flex';
-      });
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      sliders.forEach(s => s.style.display = 'none');
+      tab.classList.add('active');
+      const tabId = tab.dataset.tab;
+      travelDeals.querySelector(`#${tabId}`).style.display = 'flex';
+    });
   });
 
   // Slider functionality
   const sliderContainers = travelDeals.querySelectorAll('.slider-container');
-  
-  sliderContainers.forEach(container => {
-      const slider = container.querySelector('.deals-slider');
-      const prevBtn = container.querySelector('.prev-btn');
-      const nextBtn = container.querySelector('.next-btn');
-      const cardWidth = 320;
-      const gap = 30;
-      const scrollAmount = cardWidth + gap;
-      
-      prevBtn.addEventListener('click', () => {
-          slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-      });
 
-      nextBtn.addEventListener('click', () => {
-          slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      });
+  sliderContainers.forEach(container => {
+    const slider = container.querySelector('.deals-slider');
+    const prevBtn = container.querySelector('.prev-btn');
+    const nextBtn = container.querySelector('.next-btn');
+    const cardWidth = 320;
+    const gap = 30;
+    const scrollAmount = cardWidth + gap;
+
+    prevBtn.addEventListener('click', () => {
+      slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
   });
-  
+
   // Initialize first tab
   travelDeals.querySelector('#top-deals').style.display = 'flex';
 });
@@ -221,14 +241,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
- // Isolated JavaScript with specific function names
- const tdDeals = {
+// Isolated JavaScript with specific function names
+const tdDeals = {
   top: [
     {
       title: "Kefalonia Private Pool Stay",
       place: "Kefalonia, Greece",
       img: "/assets/1.png",
-      price:661,
+      price: 661,
       duration: "7 Nights",
       includes: "Return Flights"
     },
@@ -355,18 +375,18 @@ function tdRenderCards(tab) {
     `;
     tdSlider.appendChild(card);
   });
-  
+
   // Update card width after rendering
   if (tdSlider.firstChild) {
     const card = tdSlider.querySelector('.td-card');
     const style = window.getComputedStyle(card);
-    tdCardWidth = card.offsetWidth + 
-                 parseInt(style.marginLeft) + 
-                 parseInt(style.marginRight) + 
-                 parseInt(style.paddingLeft) + 
-                 parseInt(style.paddingRight);
+    tdCardWidth = card.offsetWidth +
+      parseInt(style.marginLeft) +
+      parseInt(style.marginRight) +
+      parseInt(style.paddingLeft) +
+      parseInt(style.paddingRight);
   }
-  
+
   // Reset index when changing tabs
   tdCurrentIndex = 0;
   tdUpdateSliderPosition();
@@ -379,10 +399,10 @@ function tdUpdateSliderPosition() {
 function tdSlide(dir) {
   const maxIndex = Math.max(tdDeals[tdCurrentTab].length - tdGetVisibleCards(), 0);
   tdCurrentIndex += dir;
-  
+
   if (tdCurrentIndex < 0) tdCurrentIndex = 0;
   if (tdCurrentIndex > maxIndex) tdCurrentIndex = maxIndex;
-  
+
   tdUpdateSliderPosition();
 }
 
@@ -423,19 +443,19 @@ function tdInit() {
   });
 
   // Touch events for mobile
-  tdSlider.addEventListener('touchstart', tdHandleTouchStart, {passive: true});
-  tdSlider.addEventListener('touchend', tdHandleTouchEnd, {passive: true});
+  tdSlider.addEventListener('touchstart', tdHandleTouchStart, { passive: true });
+  tdSlider.addEventListener('touchend', tdHandleTouchEnd, { passive: true });
 
   // Handle window resize
   window.addEventListener('resize', () => {
     if (tdSlider.firstChild) {
       const card = tdSlider.querySelector('.td-card');
       const style = window.getComputedStyle(card);
-      tdCardWidth = card.offsetWidth + 
-                   parseInt(style.marginLeft) + 
-                   parseInt(style.marginRight) + 
-                   parseInt(style.paddingLeft) + 
-                   parseInt(style.paddingRight);
+      tdCardWidth = card.offsetWidth +
+        parseInt(style.marginLeft) +
+        parseInt(style.marginRight) +
+        parseInt(style.paddingLeft) +
+        parseInt(style.paddingRight);
       tdUpdateSliderPosition();
     }
   });
@@ -471,17 +491,17 @@ ScrollReveal().reveal(".destination__card", {
 
 // ...........................radio button in thr herosection form....................
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Handle trip type radio buttons
   document.querySelectorAll('input[name="trip-type"]').forEach(radio => {
-      radio.addEventListener('change', function() {
-          const returnDateGroup = document.querySelector('.return-date');
-          if(this.value === 'oneway') {
-              returnDateGroup.style.display = 'none';
-          } else {
-              returnDateGroup.style.display = 'block';
-          }
-      });
+    radio.addEventListener('change', function () {
+      const returnDateGroup = document.querySelector('.return-date');
+      if (this.value === 'oneway') {
+        returnDateGroup.style.display = 'none';
+      } else {
+        returnDateGroup.style.display = 'block';
+      }
+    });
   });
 });
 

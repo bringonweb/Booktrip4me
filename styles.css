@@ -65,6 +65,8 @@ body {
   left: 0;
   right: 0;
   width: 100%;
+  background-color: #ffffff;
+  /* border: 1px solid #ccc; */
   backdrop-filter: blur(10px);
   z-index: 9999999 !important;
 }
@@ -411,7 +413,7 @@ body {
 }
 
 .hero-section {
-  /* position: relative; */
+  position: relative;
   height: 100vh;
   color: white;
   display: flex;
@@ -423,13 +425,65 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /* old background */
   /* background: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') */
 }
 
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  mask-image: linear-gradient(60deg, black 50%, transparent 70%);
+  -webkit-mask-image: linear-gradient(60deg, black 50%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
 
+
+.hero-animation-img {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  transform: translateX(100vw);
+  z-index: 9999;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+  /* ensures it's non-interactive */
+}
+
+.animate-hero-img {
+  animation: flyIn 1s ease-out forwards;
+}
+
+@keyframes flyIn {
+  0% {
+    transform: translateX(100vw);
+    /* No actual movement, since it's already "off-screen" */
+  }
+
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-animation-img {
+    display: none;
+    /* No animation for mobile */
+  }
+
+  .hero-section::before {
+    display: none;
+  }
+}
 
 .hero-content {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
   z-index: 1;
 }
@@ -491,16 +545,16 @@ body {
 
 /* Booking tabs styles */
 .booking-tabs {
-  width: 65%;
+  width: 50%;
   height: min-content;
   display: flex;
   gap: 1rem;
 
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #ffffff;
   border-radius: 1.5rem;
   /* overflow: hidden; */
-  box-shadow: -3px 3px 15px 5px rgba(0, 0, 0, 0.8);
+  /* box-shadow: -3px 3px 15px 5px rgba(0, 0, 0, 0.8); */
   /* max- width: 1000px; */
   /* margin: 0 auto; */
   position: relative;
@@ -2103,8 +2157,9 @@ textarea:focus {
   position: absolute;
   top: 100;
   left: 100;
-  backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   min-width: 150px;
   z-index: 1001 !important;
