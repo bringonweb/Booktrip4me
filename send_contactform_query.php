@@ -24,12 +24,12 @@ if ($conn->query($sql) === TRUE) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'booktrip4me1@gmail.com';
-        $mail->Password = 'Personal123*';
+        $mail->Username = 'adityagupta80041@gmail.com';
+        $mail->Password = 'zpzlkerohziiaouu';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        $mail->setFrom('booktrip4me1@gmail.com', 'Website Contact');
+        $mail->setFrom('adityagupta80041@gmail.com', 'Website Contact');
         $mail->addAddress('support@booktrip4me.com', 'Admin');
 
         $mail->isHTML(true);
@@ -39,7 +39,7 @@ if ($conn->query($sql) === TRUE) {
         <strong>Email:</strong> $email <br>
         <strong>Phone:</strong> $phone <br>
         <strong>Booking Ref:</strong> $booking <br>
-        <strong>Query Type:</strong> $type <br>
+        <strong>Query Type:</strong> $type <br>  
         <strong>Message:</strong> $message";
 
         $mail->send();
