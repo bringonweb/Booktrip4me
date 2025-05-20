@@ -66,7 +66,7 @@ body {
   right: 0;
   width: 100%;
   background-color: #ffffff;
-  /* border: 1px solid #ccc; */
+  border: 1px solid #ccc;
   backdrop-filter: blur(10px);
   z-index: 9999999 !important;
 }
@@ -421,7 +421,7 @@ body {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background: url('https://cdn.pixabay.com/photo/2016/04/15/10/23/grindelwald-1330662_1280.jpg');
+  background: url('https://cdn.pixabay.com/photo/2015/10/20/20/14/tatry-998418_1280.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

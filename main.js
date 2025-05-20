@@ -59,7 +59,7 @@ Object.values(tabImgs).forEach(src => {
 
 
 const heroBg = {
-  "flights": 'https://cdn.pixabay.com/photo/2016/04/15/10/23/grindelwald-1330662_1280.jpg',
+  "flights": 'https://cdn.pixabay.com/photo/2015/10/20/20/14/tatry-998418_1280.jpg',
   "hotels": 'https://plus.unsplash.com/premium_photo-1661964298224-7747aa0ac10c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   "cruises": 'https://images.unsplash.com/photo-1604474361016-73d1bd3021fa?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   "packages": 'https://cdn.pixabay.com/photo/2018/09/02/18/18/road-3649442_1280.jpg',
