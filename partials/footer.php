@@ -60,7 +60,8 @@
               class="ri-facebook-fill"></i></a>
         </li>
         <li>
-          <a href="https://www.instagram.com/" rel="noopener" target="_blank"><i class="ri-instagram-fill"></i></a>
+          <a href="https://www.instagram.com/booktrip4me?igsh=MTl4MmFnaTgwdHY5YQ==" rel="noopener" target="_blank"><i
+              class="ri-instagram-fill"></i></a>
         </li>
         <li>
           <a href="https://www.linkedin.com/company/booktrip4me" rel="noopener" target="_blank"><i

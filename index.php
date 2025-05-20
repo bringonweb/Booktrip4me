@@ -60,12 +60,12 @@
                 <div class="form-group" style="flex:1">
                   <!-- <label>From</label> -->
                   <input type="text" class="form-control" name="location" id="location" autocomplete="off"
-                    placeholder="from" required>
+                    placeholder="From" required>
                   <div id="location-suggestions" class="suggestions"></div>
                 </div>
                 <div class="form-group " style="flex:1">
                   <!-- <label>To</label> -->
-                  <input type="text" class="form-control" name="start" id="start" autocomplete="off" placeholder="to"
+                  <input type="text" class="form-control" name="start" id="start" autocomplete="off" placeholder="To"
                     required>
                   <div id="start-suggestions" class="suggestions"></div>
                 </div>
