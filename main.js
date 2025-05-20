@@ -46,10 +46,10 @@ ScrollReveal().reveal(".header__btns", {
 
 
 const tabImgs = {
-  "flights": 'Plane.png',
-  "hotels": 'Hotel.png',
-  "cruises": 'CruiseShip.png',
-  "packages": 'Car.png',
+  "flights": 'Plane.webp',
+  "hotels": 'Hotel.webp',
+  "cruises": 'CruiseShip.webp',
+  "packages": 'Car.webp',
 };
 
 Object.values(tabImgs).forEach(src => {
