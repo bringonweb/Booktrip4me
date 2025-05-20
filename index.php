@@ -249,25 +249,24 @@
           </div>
 
           <!-- Modal for Additional Information -->
-          <div class="modal" id="userDetailsModal">
-            <div class="modal-content">
-              <span class="close-btn">&times;</span>
-              <h3 class="h3Title">Please Provide us your details.<br /> so we can contact you.</h3>
-              <form class="modal-form" id="userDetailsForm">
-                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
-                <input type="tel" name="phone" id="phone" class="form-control" placeholder="Enter your phone number"
-                  required>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email"
-                  required>
-                <button type="submit" class="submit-btn">Complete Booking</button>
-              </form>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
   </section>
 
+  <div class="modal" id="userDetailsModal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3 class="h3Title">Please Provide us your details.<br /> so we can contact you.</h3>
+      <form class="modal-form" id="userDetailsForm">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+        <input type="tel" name="phone" id="phone" class="form-control" placeholder="Enter your phone number" required>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+        <button type="submit" class="submit-btn">Complete Booking</button>
+      </form>
+    </div>
+  </div>
   <style>
     /* Modal Styles */
     .modal {
