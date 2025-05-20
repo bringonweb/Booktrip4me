@@ -20,8 +20,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $formData['From'] = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
         $formData['To'] = filter_input(INPUT_POST, 'start', FILTER_SANITIZE_STRING);
         $formData['Departure'] = $_POST['departure'];
-        if (isset($_POST['return']))
-            $formData['Return'] = $_POST['return'];
+        $formData['TRIP_TYPE'] = $_POST['trip_type'];
+        if (isset($_POST['trip_type']) && $_POST['trip_type'] == 'roundtrip') {
+            if (isset($_POST['return']))
+                $formData['Return'] = $_POST['return'];
+        }
         $formData['Travellers'] = $_POST['travellers'];
     } elseif (isset($_POST['hotel-destination'])) { // Hotels form
         $formData['Destination'] = filter_input(INPUT_POST, 'hotel-destination', FILTER_SANITIZE_STRING);

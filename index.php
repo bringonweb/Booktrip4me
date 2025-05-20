@@ -74,19 +74,19 @@
 
                 <div class="form-group" style="flex:1">
                   <!-- <label>Departure</label> -->
-                  <input class="form-control" placeholder="Departure on" type="text"
+                  <input class="form-control" name="departure" placeholder="Departure on" type="text"
                     onfocus="(this.type='date', this.showPicker())" onclick="(this.type='date', this.showPicker())"
                     inputmode="none" onblur="(this.type='text')">
                 </div>
                 <div class="form-group return-date" style="flex:1">
                   <!-- <label class="mm">Return</label> -->
-                  <input class="form-control" placeholder="Returning on" type="text"
+                  <input class="form-control" name="return" placeholder="Returning on" type="text"
                     onfocus="(this.type='date', this.showPicker())" onclick="(this.type='date', this.showPicker())"
                     inputmode="none" onblur="(this.type='text')">
                 </div>
                 <div class="form-group" style="flex:1">
                   <!-- <label>Travellers</label> -->
-                  <input type="text" class="form-control" placeholder="2 Travellers, 1 Room">
+                  <input type="text" class="form-control" name="travellers" placeholder="2 Travellers, 1 Room">
                 </div>
               </div>
               <div style="display: flex; justify-content: flex-end;">
@@ -100,28 +100,30 @@
             <form id="hotelBookingForm" class="booking-form form-row" action="send_contactform_query.php" method="POST">
               <div class="form-group">
                 <!-- <label>Destination</label> -->
-                <input type="text" class="form-control" name="start" id="hotel-destination" autocomplete="off"
-                  placeholder="Destination" required>
+                <input type="text" class="form-control" name="hotel-destination" id="hotel-destination"
+                  autocomplete="off" placeholder="Destination" required>
                 <div id="hotel-suggestions" class="suggestions"></div>
               </div>
 
               <div class="row-inside-form">
                 <div class="form-group" style="flex:1">
                   <!-- <label>Check-in</label> -->
-                  <input placeholder="Check In" type="text" onfocus="(this.type='date', this.showPicker())"
-                    onblur="(this.type='text')" inputmode="none" class="form-control">
+                  <input placeholder="Check In" name="checkin" type="text"
+                    onfocus="(this.type='date', this.showPicker())" onblur="(this.type='text')" inputmode="none"
+                    class="form-control">
                 </div>
                 <div class="form-group" style="flex:1">
                   <!-- <label>Check-out</label> -->
-                  <input placeholder="Check Out" type="text" onfocus="(this.type='date', this.showPicker())"
-                    onblur="(this.type='text')" inputmode="none" class="form-control">
+                  <input placeholder="Check Out" name="checkout" type="text"
+                    onfocus="(this.type='date', this.showPicker())" onblur="(this.type='text')" inputmode="none"
+                    class="form-control">
                 </div>
               </div>
               <div class="row-inside-form">
 
                 <div class="form-group" style="flex:1">
                   <!-- <label>Rooms</label> -->
-                  <select class="form-control">
+                  <select class="form-control" name="rooms">
                     <option>1 Room</option>
                     <option>2 Rooms</option>
                     <option>3 Rooms</option>
@@ -130,7 +132,7 @@
                 </div>
                 <div class="form-group" style="flex:1">
                   <!-- <label>Guests</label> -->
-                  <select class="form-control">
+                  <select class="form-control" name="guests">
                     <option>1 Guest</option>
                     <option>2 Guests</option>
                     <option>3 Guests</option>
@@ -151,8 +153,8 @@
               method="POST">
               <div class="form-group">
                 <!-- <label>Destination</label> -->
-                <input type="text" class="form-control" name="start" id="cruises-destination" autocomplete="off"
-                  placeholder="Destination" required>
+                <input type="text" class="form-control" name="cruises-destination" id="cruises-destination"
+                  autocomplete="off" placeholder="Destination" required>
                 <div id="cruises-suggestions" class="suggestions"></div>
 
 
@@ -160,19 +162,21 @@
               <div class="row-inside-form">
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Departure</label> -->
-                  <input placeholder="Departure on" type="text" onfocus="(this.type='date', this.showPicker())"
-                    onblur="(this.type='text')" inputmode="none" class="form-control">
+                  <input placeholder="Departure on" name="departure" type="text"
+                    onfocus="(this.type='date', this.showPicker())" onblur="(this.type='text')" inputmode="none"
+                    class="form-control">
                 </div>
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Return Date</label> -->
-                  <input placeholder="Returning on" type="text" onfocus="(this.type='date', this.showPicker())"
-                    onblur="(this.type='text')" inputmode="none" class="form-control">
+                  <input placeholder="Returning on" name="return_date" type="text"
+                    onfocus="(this.type='date', this.showPicker())" onblur="(this.type='text')" inputmode="none"
+                    class="form-control">
                 </div>
               </div>
               <div class="row-inside-form">
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Cruise</label> -->
-                  <select class="form-control">
+                  <select class="form-control" name="cruise">
                     <option>Carnival</option>
                     <option>Royal Caribbean</option>
                     <option>Norwegian</option>
@@ -180,7 +184,7 @@
                 </div>
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Guests</label> -->
-                  <select class="form-control">
+                  <select class="form-control" name="guests">
                     <option>1 Guest</option>
                     <option>2 Guests</option>
                     <option>3 Guests</option>
@@ -202,12 +206,14 @@
 
                 <div class="form-group" style="flex:1;">
                   <!-- <label>From</label> -->
-                  <input type="text" class="form-control" id="clocation" autocomplete="off" placeholder="From" required>
+                  <input type="text" class="form-control" name="clocation" id="clocation" autocomplete="off"
+                    placeholder="From" required>
                   <div id="clocation-suggestions" class="suggestions"></div>
                 </div>
                 <div class="form-group" style="flex:1;">
                   <!-- <label>To</label> -->
-                  <input type="text" class="form-control" id="cstart" autocomplete="off" placeholder="To" required>
+                  <input type="text" class="form-control" name="cstart" id="cstart" autocomplete="off" placeholder="To"
+                    required>
                   <div id="cstart-suggestions" class="suggestions"></div>
                 </div>
               </div>
@@ -215,18 +221,20 @@
 
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Trip Start</label> -->
-                  <input placeholder="Trip start" type="text" onfocus="(this.type='date', this.showPicker())"
-                    onblur="(this.type='text')" inputmode="none" class="form-control">
+                  <input placeholder="Trip start" name="trip_start" type="text"
+                    onfocus="(this.type='date', this.showPicker())" onblur="(this.type='text')" inputmode="none"
+                    class="form-control">
                 </div>
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Trip End</label> -->
-                  <input placeholder="Trip End" type="text" onfocus="(this.type='date', this.showPicker())"
-                    onblur="(this.type='text')" inputmode="none" class="form-control">
+                  <input placeholder="Trip End" name="trip_end" type="text"
+                    onfocus="(this.type='date', this.showPicker())" onblur="(this.type='text')" inputmode="none"
+                    class="form-control">
                 </div>
 
                 <div class="form-group" style="flex:1;">
                   <!-- <label>Guests</label> -->
-                  <select class="form-control">
+                  <select class="form-control" name="guests">
                     <option>1 Adult</option>
                     <option>2 Adults</option>
                     <option>Family</option>
