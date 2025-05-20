@@ -67,7 +67,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Recipients
         $mail->setFrom('adityagupta80041@gmail.com', 'Booking System');
-        $mail->addAddress('support@booktrip4me.com', 'Admin');
+        // $mail->addAddress('support@booktrip4me.com', 'Admin');
+        $mail->addAddress('lakshaysingh9212+booktrip4me@gmail.com', 'Admin');
 
         // Content
         $mail->isHTML(true);
