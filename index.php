@@ -33,7 +33,7 @@
           </button>
           <button class="tab-btn" data-tab="packages">
             <i class="fas fa-car"></i>
-            car
+            Car
           </button>
         </div>
         <div class="tabs-content">
