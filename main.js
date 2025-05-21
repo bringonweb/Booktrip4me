@@ -45,25 +45,25 @@ ScrollReveal().reveal(".header__btns", {
 // });
 
 
-const tabImgs = {
-  "flights": 'Plane.webp',
-  "hotels": 'Hotel.webp',
-  "cruises": 'CruiseShip.webp',
-  "packages": 'Car.webp',
-};
+// const tabImgs = {
+//   "flights": 'Plane.webp',
+//   "hotels": 'Hotel.webp',
+//   "cruises": 'CruiseShip.webp',
+//   "packages": 'Car.webp',
+// };
 
-Object.values(tabImgs).forEach(src => {
-  const img = new Image();
-  img.src = `./assets/${src}`;
-});
+// Object.values(tabImgs).forEach(src => {
+//   const img = new Image();
+//   img.src = `./assets/${src}`;
+// });
 
 
-const heroBg = {
-  "flights": 'https://cdn.pixabay.com/photo/2015/10/20/20/14/tatry-998418_1280.jpg',
-  "hotels": 'https://plus.unsplash.com/premium_photo-1661964298224-7747aa0ac10c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  "cruises": 'https://images.unsplash.com/photo-1604474361016-73d1bd3021fa?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  "packages": 'https://cdn.pixabay.com/photo/2018/09/02/18/18/road-3649442_1280.jpg',
-};
+// const heroBg = {
+//   "flights": 'https://cdn.pixabay.com/photo/2015/10/20/20/14/tatry-998418_1280.jpg',
+//   "hotels": 'https://plus.unsplash.com/premium_photo-1661964298224-7747aa0ac10c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//   "cruises": 'https://images.unsplash.com/photo-1604474361016-73d1bd3021fa?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//   "packages": 'https://cdn.pixabay.com/photo/2018/09/02/18/18/road-3649442_1280.jpg',
+// };
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -87,15 +87,15 @@ document.addEventListener('DOMContentLoaded', function () {
       // Show the selected tab pane
       const tabId = this.getAttribute('data-tab');
       const currentTab = document.getElementById(tabId)
-      const heroImg = document.getElementById('heroImg');
-      const heroSection = document.querySelector('.hero-section');
+      // const heroImg = document.getElementById('heroImg');
+      // const heroSection = document.querySelector('.hero-section');
       currentTab.classList.add('active');
-      heroImg.src = `./assets/${tabImgs[tabId]}`;
-      heroImg.alt = `${tabId.charAt(0).toUpperCase() + tabId.slice(1)} Image`;
-      heroImg.classList.remove('animate-hero-img');
-      void heroImg.offsetWidth; // trigger reflow
-      heroImg.classList.add('animate-hero-img');
-      heroSection.style.backgroundImage = `url(${heroBg[tabId]})`;
+      // heroImg.src = `./assets/${tabImgs[tabId]}`;
+      // heroImg.alt = `${tabId.charAt(0).toUpperCase() + tabId.slice(1)} Image`;
+      // heroImg.classList.remove('animate-hero-img');
+      // void heroImg.offsetWidth; // trigger reflow
+      // heroImg.classList.add('animate-hero-img');
+      // heroSection.style.backgroundImage = `url(${heroBg[tabId]})`;
     });
   });
 });

@@ -421,15 +421,15 @@ body {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background: url('https://cdn.pixabay.com/photo/2015/10/20/20/14/tatry-998418_1280.jpg');
+  /* background: url('https://cdn.pixabay.com/photo/2015/10/20/20/14/tatry-998418_1280.jpg'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   /* old background */
-  /* background: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') */
+  background: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 }
 
-.hero-section::before {
+/* .hero-section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -441,10 +441,10 @@ body {
   -webkit-mask-image: linear-gradient(60deg, black 50%, transparent 70%);
   z-index: 1;
   pointer-events: none;
-}
+} */
 
 
-.hero-animation-img {
+/* .hero-animation-img {
   position: absolute;
   width: 50%;
   height: auto;
@@ -453,34 +453,36 @@ body {
   z-index: 99;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
   pointer-events: none;
-  /* ensures it's non-interactive */
-}
+  
+} 
+*/
 
-.animate-hero-img {
+
+/* .animate-hero-img {
   animation: flyIn 1s ease-out forwards;
 }
 
 @keyframes flyIn {
   0% {
     transform: translateX(100vw);
-    /* No actual movement, since it's already "off-screen" */
+   
   }
 
   100% {
     transform: translateX(50%);
   }
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .hero-animation-img {
     display: none;
-    /* No animation for mobile */
+    
   }
 
   .hero-section::before {
     display: none;
   }
-}
+} */
 
 .hero-content {
   width: 90%;
@@ -545,7 +547,7 @@ body {
 
 /* Booking tabs styles */
 .booking-tabs {
-  width: 50%;
+  width: 80%;
   height: min-content;
   display: flex;
   gap: 1rem;
@@ -556,7 +558,7 @@ body {
   /* overflow: hidden; */
   /* box-shadow: -3px 3px 15px 5px rgba(0, 0, 0, 0.8); */
   /* max- width: 1000px; */
-  /* margin: 0 auto; */
+  margin: 0 auto;
   position: relative;
   padding: 20px 10px;
 }
