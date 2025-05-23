@@ -16,7 +16,7 @@
   <?php include 'partials/navbar.php'; ?>
 
   <section class="hero-section">
-    <!-- <img id="heroImg" src="./assets/Plane.webp" alt="HoveringImg" class="hero-animation-img animate-hero-img" /> -->
+    <img id="heroImg" src="./assets/Hero-BG.jpg" alt="HoveringImg" class="hero-img" />
     <div class="hero-content">
       <div class="booking-tabs">
         <div class="tabs-header">
