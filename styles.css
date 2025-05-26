@@ -429,7 +429,7 @@ body {
 
 
 .hero-img {
-  width: 30vw;
+  width: 35%;
   object-fit: cover;
   /* object-position: left center; */
   border-radius: 10px;
@@ -441,7 +441,10 @@ body {
 .hero-content {
   display: flex;
   align-items: stretch;
+  justify-content: space-between;
   width: 85%;
+  max-width: 1250px;
+  padding: 0 30px;
   margin: 0 auto;
   z-index: 1;
   gap: 2rem;
